@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: silver_fact_network_usage
+    description: "Silver canonical network usage fact model"
+    tests:
+      - unique:
+          column_name: usage_pk
+      - not_null:
+          column_name: usage_pk
+      - bytes_non_negative
+    columns:
+      - name: usage_pk
+        description: "Deterministic fact primary key"
+        tests:
+          - not_null
+          - unique
+      - name: customer_key_hash
+        description: "Hashed customer key identifier"
+        tests:
+          - not_null
+      - name: total_bytes
+        description: "Combined downlink and uplink bytes"
+        tests:
+          - not_null
