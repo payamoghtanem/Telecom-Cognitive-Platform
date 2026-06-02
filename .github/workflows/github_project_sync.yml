@@ -1,0 +1,39 @@
+# GitHub Actions workflow to keep repository project board state synchronized automatically.
+# Setup:
+# 1) Create a repository secret named PROJECT_RECON_TOKEN.
+# 2) Provision a fine-grained Personal Access Token with repository read/write and project read/write access.
+# 3) Add the token to Settings > Secrets > Actions.
+# The workflow runs automatically on every push to main.
+
+name: GitHub Project Sync
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sync-project-board:
+    name: Sync GitHub Project Board
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install project sync dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
+      - name: Sync GitHub Projects board from backlog and status
+        env:
+          PROJECT_RECON_TOKEN: ${{ secrets.PROJECT_RECON_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: |
+          python ai_factory/tools/github_project_sync.py
