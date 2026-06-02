@@ -6,7 +6,7 @@ default:
       host: localhost
       port: 9000
       user: default
-      password: ""
+      password: clickhouse
       database: default
       schema: default
       threads: 1
