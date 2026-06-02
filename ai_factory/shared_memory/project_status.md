@@ -16,4 +16,4 @@
 - Ingest configuration and validation pipeline are now implemented.
 - DLQ routing and Bronze storage expected to drive Phase 2 completion.
 - CI regression caught: deprecated `source-paths` in `dbt_project.yml` caused a top-level config conflict during dbt compile and was fixed.
-- Started Phase 4 core transforms: added a Silver canonical fact model and schema test coverage.
+- Started Phase 4 core transforms: added a Silver canonical fact model, enforced the 3-day late-arrival window, and created the `dim_customer` dimension with hashed customer keys.

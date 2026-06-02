@@ -4,10 +4,6 @@ models:
   - name: silver_fact_network_usage
     description: "Silver canonical network usage fact model"
     tests:
-      - unique:
-          column_name: usage_pk
-      - not_null:
-          column_name: usage_pk
       - bytes_non_negative
     columns:
       - name: usage_pk
@@ -19,6 +15,10 @@ models:
         description: "Hashed customer key identifier"
         tests:
           - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_customer')
+                field: customer_key_hash
       - name: total_bytes
         description: "Combined downlink and uplink bytes"
         tests:

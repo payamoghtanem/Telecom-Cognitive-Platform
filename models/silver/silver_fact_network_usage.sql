@@ -12,6 +12,7 @@ with base as (
         source_system,
         ingest_timestamp
     from {{ ref('stg_fact_network_usage') }}
+    where timestamp >= now() - interval 3 day
 )
 
 select

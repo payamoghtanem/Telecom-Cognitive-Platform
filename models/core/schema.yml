@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: dim_customer
+    description: "Dimension model for customer identities using hashed keys"
+    columns:
+      - name: customer_key_hash
+        description: "Deterministic hashed customer key"
+        tests:
+          - not_null
+          - unique
