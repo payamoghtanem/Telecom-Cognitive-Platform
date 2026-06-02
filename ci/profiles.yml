@@ -1,0 +1,14 @@
+default:
+  target: dev
+  outputs:
+    dev:
+      type: clickhouse
+      host: localhost
+      port: 9000
+      user: default
+      password: ""
+      database: default
+      schema: default
+      threads: 1
+      timeout_before_checking_execution_speed: 105
+      connect_timeout: 10

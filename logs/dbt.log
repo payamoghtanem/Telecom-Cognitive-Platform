@@ -1,0 +1,14 @@
+[0m11:19:17.929800 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71928a193e30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71928a1a3aa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71928a192e40>]}
+
+
+============================== 11:19:17.939636 | 99e64027-94b1-45da-86bb-11f674a15cde ==============================
+[0m11:19:17.939636 [info ] [MainThread]: Running with dbt=1.6.1
+[0m11:19:17.940778 [debug] [MainThread]: running dbt with arguments {'write_json': 'True', 'log_path': '/workspaces/Telecom-Cognitive-Platform/logs', 'indirect_selection': 'eager', 'static_parser': 'True', 'log_format': 'default', 'no_print': 'None', 'log_cache_events': 'False', 'fail_fast': 'False', 'warn_error': 'None', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'target_path': 'None', 'profiles_dir': './ci', 'debug': 'False', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'use_colors': 'True', 'invocation_command': 'dbt compile --profiles-dir ./ci', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'version_check': 'True', 'cache_selected_only': 'False', 'printer_width': '80'}
+[0m11:19:17.950370 [info ] [MainThread]: Error importing adapter: No module named 'dbt.adapters.clickhouse'
+[0m11:19:17.953983 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Credentials in profile "default", target "dev" invalid: Runtime Error
+    Could not find adapter type clickhouse!
+[0m11:19:17.955816 [debug] [MainThread]: Command `dbt compile` failed at 11:19:17.955620 after 0.03 seconds
+[0m11:19:17.956895 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71928a425820>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71928b1112b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71928a3a95e0>]}
+[0m11:19:17.957705 [debug] [MainThread]: Flushing usage events

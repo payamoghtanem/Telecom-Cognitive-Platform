@@ -1,0 +1,11 @@
+repos:
+  - repo: local
+    hooks:
+      - id: sql-validator
+        name: SQL Validator (ai_factory/tools/sql_validator.py)
+        entry: python ai_factory/tools/sql_validator.py
+        language: python
+        files: '\.sql$'
+        types: [sql]
+        additional_dependencies:
+          - sqlglot>=16.0.0

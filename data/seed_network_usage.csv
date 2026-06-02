@@ -1,0 +1,4 @@
+customer_key_hash,usage_pk,timestamp,bytes_dl,bytes_ul,network_type,source_system,ingest_timestamp
+abc123def456abc123def456abc123de,upk1,2026-06-01 12:00:00,1024,256,4G,simulator,2026-06-01 12:01:00
+abc123def456abc123def456abc123de,upk2,2026-06-02 13:00:00,2048,512,5G,simulator,2026-06-02 13:01:00
+xyz789ghi012xyz789ghi012xyz789gh,upk3,2026-06-03 14:00:00,0,0,4G,simulator,2026-06-03 14:01:00

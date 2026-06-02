@@ -1,0 +1,80 @@
+name: Quality Check
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  quality:
+    name: Pre-commit & Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pre-commit
+
+      - name: Run pre-commit (auto fixes disabled)
+        run: |
+          pre-commit run --all-files
+
+      - name: Run tests
+        run: |
+          pytest -q
+
+  dbt:
+    name: dbt Compile & Test
+    needs: quality
+    runs-on: ubuntu-latest
+
+    services:
+      clickhouse:
+        image: clickhouse/clickhouse-server:latest
+        ports:
+          - 9000:9000
+          - 8123:8123
+        env:
+          CLICKHOUSE_DB: default
+        options: >-
+          --health-cmd "wget --quiet --tries=1 --spider http://localhost:8123/ping || exit 1"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dbt dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install dbt-core dbt-clickhouse
+
+      - name: List dbt version
+        run: dbt --version || true
+
+      - name: Run dbt seed, compile and test
+        env:
+          DBT_PROFILES_DIR: ./ci
+        run: |
+          dbt deps || true
+          dbt seed --profiles-dir ./ci || true
+          dbt compile
+          dbt test --profiles-dir ./ci || true

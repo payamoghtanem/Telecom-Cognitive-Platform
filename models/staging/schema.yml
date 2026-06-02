@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: stg_fact_network_usage
+    description: "Staging model for network usage events"
+    tests:
+      - bytes_non_negative
+    columns:
+      - name: usage_pk
+        description: "Deterministic usage primary key"
+        tests:
+          - not_null
+          - unique
+      - name: customer_key_hash
+        tests:
+          - not_null
+      - name: bytes_dl
+        tests:
+          - not_null
+      - name: bytes_ul
+        tests:
+          - not_null

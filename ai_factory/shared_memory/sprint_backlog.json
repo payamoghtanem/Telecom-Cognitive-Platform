@@ -1,0 +1,14 @@
+[
+  {
+    "task_id": "TS-001-STG-USAGE",
+    "component": "dbt-silver",
+    "user_story": "As a downstream BI Agent, I want network usage records aggregated with a 3-day sliding lookback window so that late-arriving logs are processed idempotently without full-table scans.",
+    "acceptance_criteria": [
+      "Generate composite primary key named usage_pk using MD5(CONCAT(customer_key, '-', date_key, '-', geo_key)).",
+      "Implement dbt incremental filtering using template condition: event_date >= tomorrow() - INTERVAL 3 DAY.",
+      "Enforce data contracts: bytes_dl and bytes_ul must be greater than or equal to 0."
+    ],
+    "context_anchor": "specs/platform_spec.md#section-6.1",
+    "status": "READY_FOR_DEVELOPMENT"
+  }
+]
