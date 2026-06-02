@@ -136,6 +136,7 @@ def validate_sql(sql: str) -> List[str]:
 
     # Normalize templating (basic) to avoid parser failure on Jinja-like placeholders
     cleaned = re.sub(r"\{\{[\s\S]*?\}\}", "mock_table", sql)
+    cleaned = re.sub(r"\{\%[\s\S]*?\%\}", "", cleaned)
 
     # 1) Syntax via sqlglot if available
     if sqlglot is not None:
