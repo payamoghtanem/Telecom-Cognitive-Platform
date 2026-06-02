@@ -6,14 +6,14 @@ with stg as (
         count(*) as stg_count,
         sum(coalesce(bytes_dl,0) + coalesce(bytes_ul,0)) as stg_total_bytes
     from {{ ref('stg_fact_network_usage') }}
-    where timestamp >= now() - interval 3 day
+    where toUnixTimestamp(parseDateTimeBestEffort(timestamp)) >= toUnixTimestamp(now() - interval 3 day)
 ),
 silver as (
     select
         count(*) as silver_count,
         sum(coalesce(total_bytes,0)) as silver_total_bytes
     from {{ ref('silver_fact_network_usage') }}
-    where timestamp >= now() - interval 3 day
+    where toUnixTimestamp(parseDateTimeBestEffort(timestamp)) >= toUnixTimestamp(now() - interval 3 day)
 )
 
 select
