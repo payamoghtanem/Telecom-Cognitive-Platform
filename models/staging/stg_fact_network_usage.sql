@@ -4,7 +4,7 @@
 with raw_events as (
     select
         MD5(concat(customer_key, 'SECRET_SALT')) as customer_key_hash,
-        toString(timestamp) as event_timestamp,
+        timestamp as event_timestamp,
         bytes_dl,
         bytes_ul,
         network_type,
@@ -15,7 +15,7 @@ with raw_events as (
 )
 
 select
-    MD5(concat(customer_key_hash, '-', toString(toUnixTimestamp(parseDateTimeBestEffort(event_timestamp))), '-', network_type)) as usage_pk,
+    MD5(concat(customer_key_hash, '-', toString(toUnixTimestamp(event_timestamp)), '-', network_type)) as usage_pk,
     customer_key_hash,
     event_timestamp as timestamp,
     bytes_dl,

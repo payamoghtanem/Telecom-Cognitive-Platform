@@ -17,4 +17,7 @@
 - DLQ routing and Bronze storage expected to drive Phase 2 completion.
 - CI regression caught: deprecated `source-paths` in `dbt_project.yml` caused a top-level config conflict during dbt compile and was fixed.
 - Started Phase 4 core transforms: added a Silver canonical fact model, enforced the 3-day late-arrival window, and created the `dim_customer` dimension with hashed customer keys.
-- CI update: GitHub Actions now mounts project `data/bronze` into ClickHouse (`/var/lib/clickhouse/user_files/bronze`) so the reconciliation gate can access Bronze Parquet during CI runs. Local verification: models materialize successfully with this mount, but the `no_rows` reconciliation test currently errors locally due to inconsistent Parquet `timestamp` types — recommendation: normalize the Parquet schema (timestamp types) or use a CI-only seeded fixture to guarantee stable types for the gate.
+- CI update: GitHub Actions now mounts project `data/bronze` into ClickHouse (`/var/lib/clickhouse/user_files/bronze`) so the reconciliation gate can access Bronze Parquet during CI runs.
+- Ingest fix: `ai_factory/ingest/network_usage_ingester.py` now normalizes Bronze `timestamp` values into UTC DateTime before writing Parquet.
+- Validation result: the local pipeline now materializes `stg_fact_network_usage`, `silver_fact_network_usage`, and `audit_reconciliation` successfully, and `dbt test --select audit_reconciliation` passes.
+- Next gating item: keep the strict reconciliation model in CI and keep the Parquet type contract stable for Bronze ingestion.

@@ -80,7 +80,19 @@ def validate_dataframe(df: pd.DataFrame, source_file: str, config: Dict[str, Any
     return valid_df, invalid_records
 
 
-def write_bronze(valid_df: pd.DataFrame, bronze_path: Path) -> None:
+def normalize_timestamp_column(df: pd.DataFrame, timestamp_format: str | None = None) -> pd.DataFrame:
+    if "timestamp" not in df.columns:
+        return df
+
+    timestamps = pd.to_datetime(df["timestamp"], errors="coerce", utc=True)
+    if timestamp_format:
+        df["timestamp"] = timestamps.dt.strftime(timestamp_format)
+    else:
+        df["timestamp"] = timestamps.dt.tz_convert("UTC").dt.tz_localize(None)
+    return df
+
+
+def write_bronze(valid_df: pd.DataFrame, bronze_path: Path, timestamp_format: str | None = None) -> None:
     if valid_df.empty:
         return
 
@@ -88,6 +100,7 @@ def write_bronze(valid_df: pd.DataFrame, bronze_path: Path) -> None:
         existing = pd.read_parquet(bronze_path)
         valid_df = pd.concat([existing, valid_df], ignore_index=True)
 
+    valid_df = normalize_timestamp_column(valid_df, timestamp_format)
     valid_df.to_parquet(bronze_path, index=False)
 
 
@@ -135,7 +148,7 @@ def run_ingest(config_path: Path | str) -> None:
 
     if all_valid_frames:
         combined_valid = pd.concat(all_valid_frames, ignore_index=True)
-        write_bronze(combined_valid, bronze_path)
+        write_bronze(combined_valid, bronze_path, config.get("timestamp_format"))
 
     write_dlq(all_invalid_records, dlq_path)
 
