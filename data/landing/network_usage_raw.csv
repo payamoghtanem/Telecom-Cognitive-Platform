@@ -1,0 +1,6 @@
+timestamp,customer_key,bytes_dl,bytes_ul,network_type,source_system
+2026-06-01 08:00:00,cust_001,1500,300,4G,simulator
+2026-06-01 09:00:00,cust_002,2500,500,5G,simulator
+2026-06-01 10:00:00,,1200,250,4G,simulator
+2026-06-01 11:00:00,cust_004,-100,200,5G,simulator
+2026-06-01 12:00:00,cust_005,1800,-50,4G,simulator

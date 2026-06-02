@@ -1,17 +1,17 @@
 -- staging model: stg_fact_network_usage.sql
--- compliant with validator: lowercase keywords, explicit joins avoided where not needed
+-- reads directly from Bronze ingest output and applies staging contracts
 
 with raw_events as (
     select
-        md5(concat(raw_msisdn, 'SECRET_SALT')) as customer_key_hash,
-        event_timestamp as event_timestamp,
+        md5(concat(customer_key, 'SECRET_SALT')) as customer_key_hash,
+        timestamp as event_timestamp,
         bytes_dl,
         bytes_ul,
         network_type,
         source_system,
         ingest_timestamp
-    from {{ ref('stg_raw_network_events') }}
-    where event_timestamp >= now() - interval 3 day
+    from file('data/bronze/network_usage.parquet', 'Parquet')
+    where timestamp >= now() - interval 3 day
 )
 
 select

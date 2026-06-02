@@ -1,0 +1,13 @@
+{
+  "landing_path": "data/landing",
+  "bronze_path": "data/bronze/network_usage.parquet",
+  "dlq_path": "data/dlq/malformed_records.json",
+  "required_columns": [
+    "timestamp",
+    "customer_key",
+    "bytes_dl",
+    "bytes_ul"
+  ],
+  "bytes_minimum": 0,
+  "timestamp_format": null
+}
