@@ -52,3 +52,9 @@ This repository is designed to serve as both a working data platform and an engi
 * Source code and documentation are maintained at the repository root and in structured subdirectories.
 * A dedicated `tests/` folder houses integration and validation test cases.
 * The platform is engineered for repeatable deployment, auditability, and enterprise readiness.
+
+## 6. GitHub Projects Sync
+* Automated synchronization is enabled via `.github/workflows/github_project_sync.yml`.
+* The workflow reads `ai_factory/shared_memory/sprint_backlog.json` and `ai_factory/shared_memory/project_status.md` on every push to `main`.
+* Configure `PROJECT_RECON_TOKEN` in repository secrets with a fine-grained PAT that has repository and project board read/write access.
+* This ensures features, user stories, and task statuses remain aligned between the repo and GitHub Projects.
