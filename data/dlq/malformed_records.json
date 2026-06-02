@@ -106,5 +106,41 @@
       "source_system": "simulator"
     },
     "error_reason": "bytes_ul value below minimum 0"
+  },
+  {
+    "source_file": "network_usage_raw.csv",
+    "row": {
+      "timestamp": "2026-06-01 10:00:00",
+      "customer_key": NaN,
+      "bytes_dl": 1200,
+      "bytes_ul": 250,
+      "network_type": "4G",
+      "source_system": "simulator"
+    },
+    "error_reason": "missing or empty required column 'customer_key'"
+  },
+  {
+    "source_file": "network_usage_raw.csv",
+    "row": {
+      "timestamp": "2026-06-01 11:00:00",
+      "customer_key": "cust_004",
+      "bytes_dl": -100,
+      "bytes_ul": 200,
+      "network_type": "5G",
+      "source_system": "simulator"
+    },
+    "error_reason": "bytes_dl value below minimum 0"
+  },
+  {
+    "source_file": "network_usage_raw.csv",
+    "row": {
+      "timestamp": "2026-06-01 12:00:00",
+      "customer_key": "cust_005",
+      "bytes_dl": 1800,
+      "bytes_ul": -50,
+      "network_type": "4G",
+      "source_system": "simulator"
+    },
+    "error_reason": "bytes_ul value below minimum 0"
   }
 ]

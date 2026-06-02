@@ -88,7 +88,8 @@ def normalize_timestamp_column(df: pd.DataFrame, timestamp_format: str | None = 
     if timestamp_format:
         df["timestamp"] = timestamps.dt.strftime(timestamp_format)
     else:
-        df["timestamp"] = timestamps.dt.tz_convert("UTC").dt.tz_localize(None)
+        # Preserve UTC-aware timestamp semantics for Parquet output.
+        df["timestamp"] = timestamps.dt.tz_convert("UTC")
     return df
 
 
