@@ -3,7 +3,6 @@ version: '1.0'
 config-version: 2
 profile: 'default'
 
-source-paths: ["models"]
 model-paths: ["models"]
 seed-paths: ["data"]
 test-paths: ["tests"]

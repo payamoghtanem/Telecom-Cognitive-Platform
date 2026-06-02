@@ -15,3 +15,4 @@
 ## 📝 Engineering Notes & Artifacts
 - Ingest configuration and validation pipeline are now implemented.
 - DLQ routing and Bronze storage expected to drive Phase 2 completion.
+- CI regression caught: deprecated `source-paths` in `dbt_project.yml` caused a top-level config conflict during dbt compile and was fixed.
