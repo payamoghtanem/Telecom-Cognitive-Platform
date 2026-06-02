@@ -64,10 +64,40 @@ def _find_uppercase_keywords(sql: str) -> List[str]:
 
 
 def _find_comma_joins(sql: str) -> List[str]:
+    """Detect comma-style joins in FROM clause (e.g., FROM t1, t2).
+    
+    Ignores commas in SELECT lists, function arguments, or within parentheses.
+    """
     issues: List[str] = []
-    # Simple heuristic: look for 'FROM <anything>,' patterns (could be across whitespace/newlines)
-    if re.search(r"\bFROM\b[\s\S]*?,", sql, flags=re.IGNORECASE):
-        issues.append("Comma-style join detected in FROM clause; use explicit JOIN ... ON/USING instead.")
+    
+    # Find FROM keyword position
+    from_match = re.search(r"\bFROM\b", sql, flags=re.IGNORECASE)
+    if not from_match:
+        return issues
+    
+    from_pos = from_match.end()
+    
+    # Find the end of the FROM clause (next major SQL keyword: WHERE, GROUP, ORDER, HAVING, JOIN, WITH, LIMIT, etc.)
+    from_clause_end = len(sql)
+    for keyword in [r"\bWHERE\b", r"\bGROUP\b", r"\bORDER\b", r"\bHAVING\b", r"\bJOIN\b", r"\bWITH\b", r"\bLIMIT\b", r"\bOFFSET\b", r"\bUNION\b"]:
+        m = re.search(keyword, sql[from_pos:], flags=re.IGNORECASE)
+        if m:
+            from_clause_end = min(from_clause_end, from_pos + m.start())
+    
+    from_clause = sql[from_pos:from_clause_end]
+    
+    # Check for commas in FROM clause that are not inside parentheses
+    paren_depth = 0
+    for i, char in enumerate(from_clause):
+        if char == '(':
+            paren_depth += 1
+        elif char == ')':
+            paren_depth -= 1
+        elif char == ',' and paren_depth == 0:
+            # Found a comma at top level (not in function args or subqueries)
+            issues.append("Comma-style join detected in FROM clause; use explicit JOIN ... ON/USING instead.")
+            break
+    
     return issues
 
 
