@@ -57,4 +57,5 @@ This repository is designed to serve as both a working data platform and an engi
 * Automated synchronization is enabled via `.github/workflows/github_project_sync.yml`.
 * The workflow reads `ai_factory/shared_memory/sprint_backlog.json` and `ai_factory/shared_memory/project_status.md` on every push to `main`.
 * Configure `PROJECT_RECON_TOKEN` in repository secrets with a fine-grained PAT that has repository and project board read/write access.
+* The workflow will also fall back to `GITHUB_TOKEN` if `PROJECT_RECON_TOKEN` is not available, provided the repository permissions allow Projects write access.
 * This ensures features, user stories, and task statuses remain aligned between the repo and GitHub Projects.

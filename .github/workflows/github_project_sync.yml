@@ -12,6 +12,15 @@ on:
     branches:
       - main
 
+permissions:
+  contents: read
+  metadata: read
+  issues: write
+  pull-requests: write
+  actions: read
+  packages: read
+  projects: write
+
 jobs:
   sync-project-board:
     name: Sync GitHub Project Board
@@ -33,7 +42,7 @@ jobs:
 
       - name: Sync GitHub Projects board from backlog and status
         env:
-          PROJECT_RECON_TOKEN: ${{ secrets.PROJECT_RECON_TOKEN }}
+          PROJECT_RECON_TOKEN: ${{ secrets.PROJECT_RECON_TOKEN || github.token }}
           GITHUB_REPOSITORY: ${{ github.repository }}
         run: |
           python ai_factory/tools/github_project_sync.py

@@ -292,10 +292,10 @@ def sync_project_items(token: str, owner: str, repo: str, items: list[ProjectTas
 
 
 def main() -> int:
-    token = os.environ.get("PROJECT_RECON_TOKEN")
+    token = os.environ.get("PROJECT_RECON_TOKEN") or os.environ.get("GITHUB_TOKEN")
     repo = os.environ.get("GITHUB_REPOSITORY")
     if not token:
-        print("ERROR: PROJECT_RECON_TOKEN is not set.")
+        print("ERROR: No token available. Set PROJECT_RECON_TOKEN in repository secrets or provide a valid GITHUB_TOKEN with project permissions.")
         return 1
     if not repo or "/" not in repo:
         print("ERROR: GITHUB_REPOSITORY is not set or invalid.")
