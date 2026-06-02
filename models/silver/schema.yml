@@ -23,3 +23,8 @@ models:
         description: "Combined downlink and uplink bytes"
         tests:
           - not_null
+
+  - name: audit_reconciliation
+    description: "Audit reconciliation: returns rows when staging vs silver diverge for active partition"
+    tests:
+      - no_rows
