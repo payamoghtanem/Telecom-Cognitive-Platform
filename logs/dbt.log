@@ -12,3 +12,1643 @@ Runtime Error
 [0m11:19:17.955816 [debug] [MainThread]: Command `dbt compile` failed at 11:19:17.955620 after 0.03 seconds
 [0m11:19:17.956895 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71928a425820>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71928b1112b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71928a3a95e0>]}
 [0m11:19:17.957705 [debug] [MainThread]: Flushing usage events
+[0m13:59:13.429479 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a498f752150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a498eb2d100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a498f686ea0>]}
+
+
+============================== 13:59:13.436601 | b0e6a65f-5c21-495e-9a78-72a8c5c08467 ==============================
+[0m13:59:13.436601 [info ] [MainThread]: Running with dbt=1.11.11
+[0m13:59:13.437766 [debug] [MainThread]: running dbt with arguments {'send_anonymous_usage_stats': 'True', 'fail_fast': 'False', 'static_parser': 'True', 'version_check': 'True', 'printer_width': '80', 'use_experimental_parser': 'False', 'use_colors': 'True', 'log_cache_events': 'False', 'warn_error': 'None', 'target_path': 'None', 'indirect_selection': 'eager', 'log_format': 'default', 'cache_selected_only': 'False', 'profiles_dir': './ci', 'quiet': 'False', 'empty': 'False', 'no_print': 'None', 'write_json': 'True', 'introspect': 'True', 'log_path': '/workspaces/Telecom-Cognitive-Platform/logs', 'debug': 'False', 'invocation_command': 'dbt compile --profiles-dir ./ci', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True'}
+[0m13:59:13.664087 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b0e6a65f-5c21-495e-9a78-72a8c5c08467', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a49913558b0>]}
+[0m13:59:13.729699 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b0e6a65f-5c21-495e-9a78-72a8c5c08467', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a498e5aa3c0>]}
+[0m13:59:13.730702 [info ] [MainThread]: Registered adapter: clickhouse=1.10.0
+[0m13:59:13.857635 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m13:59:13.858511 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m13:59:13.859131 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'b0e6a65f-5c21-495e-9a78-72a8c5c08467', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a498e3f8890>]}
+[0m13:59:15.897191 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `relationships` defined on
+'silver_fact_network_usage' in package 'telecom_cognitive_platform'
+(models/silver/schema.yml). Arguments to generic tests should be nested under
+the `arguments` property.
+[0m13:59:15.898547 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'b0e6a65f-5c21-495e-9a78-72a8c5c08467', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a498da56fc0>]}
+[0m13:59:15.909891 [error] [MainThread]: Encountered an error:
+Compilation Error in test relationships_silver_fact_network_usage_customer_key_hash__customer_key_hash__ref_dim_customer___customer_key_hash (models/silver/schema.yml)
+  macro 'dbt_macro__test_relationships' takes no keyword argument 'to_field'
+[0m13:59:15.911352 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m13:59:15.915431 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": false, "command_wall_clock_time": 2.5478425, "process_in_blocks": "240", "process_kernel_time": 0.191194, "process_mem_max_rss": "122832", "process_out_blocks": "16", "process_user_time": 3.644576}
+[0m13:59:15.916804 [debug] [MainThread]: Command `dbt compile` failed at 13:59:15.916635 after 2.55 seconds
+[0m13:59:15.918070 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a498ec5cf20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a498df391c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a498dfaddc0>]}
+[0m13:59:15.918930 [debug] [MainThread]: Flushing usage events
+[0m13:59:16.322816 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:59:58.022812 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x768a34de8440>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x768a376f42c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x768a3533d070>]}
+
+
+============================== 13:59:58.291643 | 667abd88-c8e3-42ae-beb8-5ce2a706f57a ==============================
+[0m13:59:58.291643 [info ] [MainThread]: Running with dbt=1.11.11
+[0m13:59:58.292655 [debug] [MainThread]: running dbt with arguments {'use_colors': 'True', 'write_json': 'True', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'invocation_command': 'dbt compile --profiles-dir ./ci', 'send_anonymous_usage_stats': 'True', 'empty': 'False', 'introspect': 'True', 'fail_fast': 'False', 'log_path': '/workspaces/Telecom-Cognitive-Platform/logs', 'static_parser': 'True', 'no_print': 'None', 'quiet': 'False', 'version_check': 'True', 'log_format': 'default', 'printer_width': '80', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'debug': 'False', 'cache_selected_only': 'False', 'warn_error': 'None', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'profiles_dir': './ci'}
+[0m13:59:58.480900 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '667abd88-c8e3-42ae-beb8-5ce2a706f57a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x768a375cda30>]}
+[0m13:59:58.552549 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '667abd88-c8e3-42ae-beb8-5ce2a706f57a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x768a359dd490>]}
+[0m13:59:58.553782 [info ] [MainThread]: Registered adapter: clickhouse=1.10.0
+[0m13:59:58.713478 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m13:59:58.714348 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m13:59:58.714965 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '667abd88-c8e3-42ae-beb8-5ce2a706f57a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x768a34a20830>]}
+[0m14:00:00.936889 [error] [MainThread]: Encountered an error:
+Compilation Error
+  dbt found two data_tests with the name "unique_silver_fact_network_usage_usage_pk" defined on "models.silver_fact_network_usage".
+  
+  Since these resources have the same name, dbt will be unable to find the correct resource
+  when running tests.
+  
+  To fix this, change the name of one of these resources:
+  - test.telecom_cognitive_platform.unique_silver_fact_network_usage_usage_pk.80bf80164f (models/silver/schema.yml)
+  - test.telecom_cognitive_platform.unique_silver_fact_network_usage_usage_pk.80bf80164f (models/silver/schema.yml)
+[0m14:00:00.943101 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": false, "command_wall_clock_time": 2.9820225, "process_in_blocks": "5096", "process_kernel_time": 0.157245, "process_mem_max_rss": "123052", "process_out_blocks": "16", "process_user_time": 3.567516}
+[0m14:00:00.945680 [debug] [MainThread]: Command `dbt compile` failed at 14:00:00.945466 after 2.98 seconds
+[0m14:00:00.949225 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x768a34deaa80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x768a348909b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x768a343086b0>]}
+[0m14:00:00.950533 [debug] [MainThread]: Flushing usage events
+[0m14:00:01.343359 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:00:35.488374 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x768e40424260>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x768e40e39610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x768e4271e630>]}
+
+
+============================== 14:00:35.493402 | fc863059-2485-49da-94da-03b2157bf124 ==============================
+[0m14:00:35.493402 [info ] [MainThread]: Running with dbt=1.11.11
+[0m14:00:35.494444 [debug] [MainThread]: running dbt with arguments {'introspect': 'True', 'invocation_command': 'dbt compile --profiles-dir ./ci', 'indirect_selection': 'eager', 'warn_error': 'None', 'log_cache_events': 'False', 'debug': 'False', 'write_json': 'True', 'quiet': 'False', 'empty': 'False', 'fail_fast': 'False', 'version_check': 'True', 'static_parser': 'True', 'log_path': '/workspaces/Telecom-Cognitive-Platform/logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True', 'cache_selected_only': 'False', 'printer_width': '80', 'no_print': 'None', 'log_format': 'default', 'use_experimental_parser': 'False', 'use_colors': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True', 'profiles_dir': './ci'}
+[0m14:00:35.715317 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'fc863059-2485-49da-94da-03b2157bf124', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x768e42c71ac0>]}
+[0m14:00:35.808343 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'fc863059-2485-49da-94da-03b2157bf124', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x768e40522120>]}
+[0m14:00:35.809389 [info ] [MainThread]: Registered adapter: clickhouse=1.10.0
+[0m14:00:36.030104 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m14:00:36.031016 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m14:00:36.031637 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'fc863059-2485-49da-94da-03b2157bf124', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x768e40767c80>]}
+[0m14:00:38.236658 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'fc863059-2485-49da-94da-03b2157bf124', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x768e40e38ef0>]}
+[0m14:00:38.458271 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/Telecom-Cognitive-Platform/target/manifest.json
+[0m14:00:38.461781 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/Telecom-Cognitive-Platform/target/semantic_manifest.json
+[0m14:00:38.485202 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'fc863059-2485-49da-94da-03b2157bf124', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x768e3efc5d60>]}
+[0m14:00:38.486247 [info ] [MainThread]: Found 3 models, 15 data tests, 2 seeds, 524 macros
+[0m14:00:38.487294 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'fc863059-2485-49da-94da-03b2157bf124', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x768e3fd1fef0>]}
+[0m14:00:38.491246 [info ] [MainThread]: 
+[0m14:00:38.492625 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:00:38.495851 [info ] [MainThread]: 
+[0m14:00:38.497483 [debug] [MainThread]: Acquiring new clickhouse connection 'master'
+[0m14:00:38.510825 [debug] [ThreadPool]: Acquiring new clickhouse connection 'list__default'
+[0m14:00:38.538919 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:00:39.052118 [debug] [ThreadPool]: dbt_clickhouse adapter: Got a retryable error when attempting to open a clickhouse connection.
+1 attempts remaining. Retrying in 1 seconds.
+Error:
+Code: 210. Connection refused (localhost:9000)
+[0m14:00:40.058984 [debug] [ThreadPool]: dbt_clickhouse adapter: Error running SQL: macro list_relations_without_caching
+[0m14:00:40.060058 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:00:40.060554 [debug] [MainThread]: Connection 'list__default' was left open.
+[0m14:00:40.060997 [debug] [MainThread]: On list__default: No close available on handle
+[0m14:00:40.061888 [error] [MainThread]: Encountered an error:
+Database Error
+  Code: 210. Connection refused (localhost:9000)
+[0m14:00:40.065080 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": false, "command_wall_clock_time": 4.6401496, "process_in_blocks": "3696", "process_kernel_time": 0.212474, "process_mem_max_rss": "149492", "process_out_blocks": "2600", "process_user_time": 4.322272}
+[0m14:00:40.066382 [debug] [MainThread]: Command `dbt compile` failed at 14:00:40.066211 after 4.64 seconds
+[0m14:00:40.067338 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x768e44627a10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x768e3f011fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x768e3f1f6960>]}
+[0m14:00:40.068298 [debug] [MainThread]: Flushing usage events
+[0m14:00:40.457273 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:01:42.603907 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79ec41930860>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79ec4199e0c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79ec43e987a0>]}
+
+
+============================== 14:01:42.617616 | e67ba016-8a39-47f2-85be-80687283c668 ==============================
+[0m14:01:42.617616 [info ] [MainThread]: Running with dbt=1.11.11
+[0m14:01:42.619156 [debug] [MainThread]: running dbt with arguments {'profiles_dir': './ci', 'invocation_command': 'dbt compile --profiles-dir ./ci', 'debug': 'False', 'introspect': 'True', 'fail_fast': 'False', 'target_path': 'None', 'warn_error': 'None', 'use_experimental_parser': 'False', 'use_colors': 'True', 'log_format': 'default', 'log_cache_events': 'False', 'printer_width': '80', 'version_check': 'True', 'indirect_selection': 'eager', 'quiet': 'False', 'partial_parse': 'True', 'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'no_print': 'None', 'log_path': '/workspaces/Telecom-Cognitive-Platform/logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'empty': 'False', 'cache_selected_only': 'False'}
+[0m14:01:42.923768 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e67ba016-8a39-47f2-85be-80687283c668', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79ec43c45ac0>]}
+[0m14:01:43.091218 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e67ba016-8a39-47f2-85be-80687283c668', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79ec418cc8f0>]}
+[0m14:01:43.093955 [info ] [MainThread]: Registered adapter: clickhouse=1.10.0
+[0m14:01:43.360303 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m14:01:43.502357 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m14:01:43.502952 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m14:01:43.503366 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m14:01:43.561624 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e67ba016-8a39-47f2-85be-80687283c668', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79ec40a741d0>]}
+[0m14:01:43.713451 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/Telecom-Cognitive-Platform/target/manifest.json
+[0m14:01:43.716420 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/Telecom-Cognitive-Platform/target/semantic_manifest.json
+[0m14:01:43.728704 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e67ba016-8a39-47f2-85be-80687283c668', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79ec40af6bd0>]}
+[0m14:01:43.729396 [info ] [MainThread]: Found 3 models, 15 data tests, 2 seeds, 524 macros
+[0m14:01:43.730148 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e67ba016-8a39-47f2-85be-80687283c668', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79ec40ab45f0>]}
+[0m14:01:43.732699 [info ] [MainThread]: 
+[0m14:01:43.733306 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:01:43.733906 [info ] [MainThread]: 
+[0m14:01:43.734772 [debug] [MainThread]: Acquiring new clickhouse connection 'master'
+[0m14:01:43.742541 [debug] [ThreadPool]: Acquiring new clickhouse connection 'list__default'
+[0m14:01:43.755504 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:01:44.095205 [debug] [ThreadPool]: dbt_clickhouse adapter: On list__default: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "default", "target_name": "dev", "connection_name": "list__default"} */
+with mv_sources as (
+      -- Find all MVs and their target tables (database and name of the MV, plus the SELECT SQL)
+      select
+        name as mv_name,
+        database as mv_database,
+        any(as_select) as mv_sql,
+        any(replaceRegexpOne(create_table_query, '.*TO\\s+`?([^`\\s(]+)`?\\.`?([^`\\s(]+)`?.*', '\\1.\\2')) as target_fqn
+      
+      from system.tables
+      
+      where engine = 'MaterializedView'
+        and create_table_query like '%TO %'
+      group by mv_name, mv_database
+    )
+    select
+      t.name as name,
+      t.database as schema,
+      multiIf(
+        t.engine = 'MaterializedView', 'materialized_view',
+        t.engine = 'View', 'view',
+        t.engine = 'Dictionary', 'dictionary',
+        'table'
+      ) as type,
+      db.engine as db_engine,
+      groupArrayIf(
+        map('schema', mv_sources.mv_database, 'name', mv_sources.mv_name, 'sql', mv_sources.mv_sql),
+        mv_sources.mv_name != ''
+      ) as mvs_pointing_to_it,0 as is_on_cluster
+        from system.tables as t
+      
+        join system.databases as db on t.database = db.name
+        left join mv_sources on mv_sources.target_fqn = concat(t.database, '.', t.name)
+      where schema = 'default'
+      group by name, schema, type, db_engine
+
+  ...
+[0m14:01:44.119597 [debug] [ThreadPool]: dbt_clickhouse adapter: SQL status: OK in 0.02 seconds
+[0m14:01:44.178286 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e67ba016-8a39-47f2-85be-80687283c668', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79ec4179e240>]}
+[0m14:01:44.181578 [debug] [Thread-1 (]: Began running node model.telecom_cognitive_platform.stg_fact_network_usage
+[0m14:01:44.182258 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list__default, now model.telecom_cognitive_platform.stg_fact_network_usage)
+[0m14:01:44.182906 [debug] [Thread-1 (]: Began compiling node model.telecom_cognitive_platform.stg_fact_network_usage
+[0m14:01:44.189387 [debug] [Thread-1 (]: Writing injected SQL for node "model.telecom_cognitive_platform.stg_fact_network_usage"
+[0m14:01:44.190295 [debug] [Thread-1 (]: Began executing node model.telecom_cognitive_platform.stg_fact_network_usage
+[0m14:01:44.191322 [debug] [Thread-1 (]: Finished running node model.telecom_cognitive_platform.stg_fact_network_usage
+[0m14:01:44.191912 [debug] [Thread-1 (]: Began running node seed.telecom_cognitive_platform.network_usage_raw
+[0m14:01:44.192560 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.telecom_cognitive_platform.stg_fact_network_usage, now seed.telecom_cognitive_platform.network_usage_raw)
+[0m14:01:44.193397 [debug] [Thread-1 (]: Began compiling node seed.telecom_cognitive_platform.network_usage_raw
+[0m14:01:44.195582 [debug] [Thread-1 (]: Began executing node seed.telecom_cognitive_platform.network_usage_raw
+[0m14:01:44.196412 [debug] [Thread-1 (]: Finished running node seed.telecom_cognitive_platform.network_usage_raw
+[0m14:01:44.196944 [debug] [Thread-1 (]: Began running node seed.telecom_cognitive_platform.seed_network_usage
+[0m14:01:44.197589 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.telecom_cognitive_platform.network_usage_raw, now seed.telecom_cognitive_platform.seed_network_usage)
+[0m14:01:44.198100 [debug] [Thread-1 (]: Began compiling node seed.telecom_cognitive_platform.seed_network_usage
+[0m14:01:44.200198 [debug] [Thread-1 (]: Began executing node seed.telecom_cognitive_platform.seed_network_usage
+[0m14:01:44.201140 [debug] [Thread-1 (]: Finished running node seed.telecom_cognitive_platform.seed_network_usage
+[0m14:01:44.201700 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.sample_compliant
+[0m14:01:44.202294 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.telecom_cognitive_platform.seed_network_usage, now test.telecom_cognitive_platform.sample_compliant)
+[0m14:01:44.202760 [debug] [Thread-1 (]: Began compiling node test.telecom_cognitive_platform.sample_compliant
+[0m14:01:44.204873 [debug] [Thread-1 (]: Writing injected SQL for node "test.telecom_cognitive_platform.sample_compliant"
+[0m14:01:44.205710 [debug] [Thread-1 (]: Began executing node test.telecom_cognitive_platform.sample_compliant
+[0m14:01:44.206646 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.sample_compliant
+[0m14:01:44.207180 [debug] [Thread-1 (]: Began running node model.telecom_cognitive_platform.dim_customer
+[0m14:01:44.207720 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.telecom_cognitive_platform.sample_compliant, now model.telecom_cognitive_platform.dim_customer)
+[0m14:01:44.208303 [debug] [Thread-1 (]: Began compiling node model.telecom_cognitive_platform.dim_customer
+[0m14:01:44.211198 [debug] [Thread-1 (]: Writing injected SQL for node "model.telecom_cognitive_platform.dim_customer"
+[0m14:01:44.211977 [debug] [Thread-1 (]: Began executing node model.telecom_cognitive_platform.dim_customer
+[0m14:01:44.212730 [debug] [Thread-1 (]: Finished running node model.telecom_cognitive_platform.dim_customer
+[0m14:01:44.213290 [debug] [Thread-1 (]: Began running node model.telecom_cognitive_platform.silver_fact_network_usage
+[0m14:01:44.214131 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.telecom_cognitive_platform.dim_customer, now model.telecom_cognitive_platform.silver_fact_network_usage)
+[0m14:01:44.214648 [debug] [Thread-1 (]: Began compiling node model.telecom_cognitive_platform.silver_fact_network_usage
+[0m14:01:44.218316 [debug] [Thread-1 (]: Writing injected SQL for node "model.telecom_cognitive_platform.silver_fact_network_usage"
+[0m14:01:44.219357 [debug] [Thread-1 (]: Began executing node model.telecom_cognitive_platform.silver_fact_network_usage
+[0m14:01:44.220421 [debug] [Thread-1 (]: Finished running node model.telecom_cognitive_platform.silver_fact_network_usage
+[0m14:01:44.221018 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.bytes_non_negative_stg_fact_network_usage_.851f94137c
+[0m14:01:44.221747 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.telecom_cognitive_platform.silver_fact_network_usage, now test.telecom_cognitive_platform.bytes_non_negative_stg_fact_network_usage_.851f94137c)
+[0m14:01:44.222888 [debug] [Thread-1 (]: Began compiling node test.telecom_cognitive_platform.bytes_non_negative_stg_fact_network_usage_.851f94137c
+[0m14:01:44.235014 [debug] [Thread-1 (]: Writing injected SQL for node "test.telecom_cognitive_platform.bytes_non_negative_stg_fact_network_usage_.851f94137c"
+[0m14:01:44.236346 [debug] [Thread-1 (]: Began executing node test.telecom_cognitive_platform.bytes_non_negative_stg_fact_network_usage_.851f94137c
+[0m14:01:44.237531 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.bytes_non_negative_stg_fact_network_usage_.851f94137c
+[0m14:01:44.238849 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_bytes_dl.27ab51994f
+[0m14:01:44.240496 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.telecom_cognitive_platform.bytes_non_negative_stg_fact_network_usage_.851f94137c, now test.telecom_cognitive_platform.not_null_stg_fact_network_usage_bytes_dl.27ab51994f)
+[0m14:01:44.246431 [debug] [Thread-1 (]: Began compiling node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_bytes_dl.27ab51994f
+[0m14:01:44.271701 [debug] [Thread-1 (]: Writing injected SQL for node "test.telecom_cognitive_platform.not_null_stg_fact_network_usage_bytes_dl.27ab51994f"
+[0m14:01:44.273137 [debug] [Thread-1 (]: Began executing node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_bytes_dl.27ab51994f
+[0m14:01:44.274674 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_bytes_dl.27ab51994f
+[0m14:01:44.275553 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_bytes_ul.43978cf3c2
+[0m14:01:44.276441 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.telecom_cognitive_platform.not_null_stg_fact_network_usage_bytes_dl.27ab51994f, now test.telecom_cognitive_platform.not_null_stg_fact_network_usage_bytes_ul.43978cf3c2)
+[0m14:01:44.277166 [debug] [Thread-1 (]: Began compiling node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_bytes_ul.43978cf3c2
+[0m14:01:44.287792 [debug] [Thread-1 (]: Writing injected SQL for node "test.telecom_cognitive_platform.not_null_stg_fact_network_usage_bytes_ul.43978cf3c2"
+[0m14:01:44.288879 [debug] [Thread-1 (]: Began executing node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_bytes_ul.43978cf3c2
+[0m14:01:44.291488 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_bytes_ul.43978cf3c2
+[0m14:01:44.292409 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_customer_key_hash.4e37b9929a
+[0m14:01:44.293905 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.telecom_cognitive_platform.not_null_stg_fact_network_usage_bytes_ul.43978cf3c2, now test.telecom_cognitive_platform.not_null_stg_fact_network_usage_customer_key_hash.4e37b9929a)
+[0m14:01:44.296959 [debug] [Thread-1 (]: Began compiling node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_customer_key_hash.4e37b9929a
+[0m14:01:44.370648 [debug] [Thread-1 (]: Writing injected SQL for node "test.telecom_cognitive_platform.not_null_stg_fact_network_usage_customer_key_hash.4e37b9929a"
+[0m14:01:44.371540 [debug] [Thread-1 (]: Began executing node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_customer_key_hash.4e37b9929a
+[0m14:01:44.372400 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_customer_key_hash.4e37b9929a
+[0m14:01:44.372945 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_usage_pk.24207a32b9
+[0m14:01:44.373524 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.telecom_cognitive_platform.not_null_stg_fact_network_usage_customer_key_hash.4e37b9929a, now test.telecom_cognitive_platform.not_null_stg_fact_network_usage_usage_pk.24207a32b9)
+[0m14:01:44.374118 [debug] [Thread-1 (]: Began compiling node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_usage_pk.24207a32b9
+[0m14:01:44.378474 [debug] [Thread-1 (]: Writing injected SQL for node "test.telecom_cognitive_platform.not_null_stg_fact_network_usage_usage_pk.24207a32b9"
+[0m14:01:44.379146 [debug] [Thread-1 (]: Began executing node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_usage_pk.24207a32b9
+[0m14:01:44.379904 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_usage_pk.24207a32b9
+[0m14:01:44.380401 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.unique_stg_fact_network_usage_usage_pk.cb284a42a0
+[0m14:01:44.380941 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.telecom_cognitive_platform.not_null_stg_fact_network_usage_usage_pk.24207a32b9, now test.telecom_cognitive_platform.unique_stg_fact_network_usage_usage_pk.cb284a42a0)
+[0m14:01:44.381555 [debug] [Thread-1 (]: Began compiling node test.telecom_cognitive_platform.unique_stg_fact_network_usage_usage_pk.cb284a42a0
+[0m14:01:44.387992 [debug] [Thread-1 (]: Writing injected SQL for node "test.telecom_cognitive_platform.unique_stg_fact_network_usage_usage_pk.cb284a42a0"
+[0m14:01:44.388722 [debug] [Thread-1 (]: Began executing node test.telecom_cognitive_platform.unique_stg_fact_network_usage_usage_pk.cb284a42a0
+[0m14:01:44.389499 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.unique_stg_fact_network_usage_usage_pk.cb284a42a0
+[0m14:01:44.390002 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.not_null_dim_customer_customer_key_hash.dbc9d3ebe8
+[0m14:01:44.390577 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.telecom_cognitive_platform.unique_stg_fact_network_usage_usage_pk.cb284a42a0, now test.telecom_cognitive_platform.not_null_dim_customer_customer_key_hash.dbc9d3ebe8)
+[0m14:01:44.391068 [debug] [Thread-1 (]: Began compiling node test.telecom_cognitive_platform.not_null_dim_customer_customer_key_hash.dbc9d3ebe8
+[0m14:01:44.395141 [debug] [Thread-1 (]: Writing injected SQL for node "test.telecom_cognitive_platform.not_null_dim_customer_customer_key_hash.dbc9d3ebe8"
+[0m14:01:44.395898 [debug] [Thread-1 (]: Began executing node test.telecom_cognitive_platform.not_null_dim_customer_customer_key_hash.dbc9d3ebe8
+[0m14:01:44.396661 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.not_null_dim_customer_customer_key_hash.dbc9d3ebe8
+[0m14:01:44.397259 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.unique_dim_customer_customer_key_hash.f954ac283e
+[0m14:01:44.397916 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.telecom_cognitive_platform.not_null_dim_customer_customer_key_hash.dbc9d3ebe8, now test.telecom_cognitive_platform.unique_dim_customer_customer_key_hash.f954ac283e)
+[0m14:01:44.398384 [debug] [Thread-1 (]: Began compiling node test.telecom_cognitive_platform.unique_dim_customer_customer_key_hash.f954ac283e
+[0m14:01:44.402351 [debug] [Thread-1 (]: Writing injected SQL for node "test.telecom_cognitive_platform.unique_dim_customer_customer_key_hash.f954ac283e"
+[0m14:01:44.403052 [debug] [Thread-1 (]: Began executing node test.telecom_cognitive_platform.unique_dim_customer_customer_key_hash.f954ac283e
+[0m14:01:44.403850 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.unique_dim_customer_customer_key_hash.f954ac283e
+[0m14:01:44.404408 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.bytes_non_negative_silver_fact_network_usage_.afbe04dc6c
+[0m14:01:44.405087 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.telecom_cognitive_platform.unique_dim_customer_customer_key_hash.f954ac283e, now test.telecom_cognitive_platform.bytes_non_negative_silver_fact_network_usage_.afbe04dc6c)
+[0m14:01:44.405641 [debug] [Thread-1 (]: Began compiling node test.telecom_cognitive_platform.bytes_non_negative_silver_fact_network_usage_.afbe04dc6c
+[0m14:01:44.409635 [debug] [Thread-1 (]: Writing injected SQL for node "test.telecom_cognitive_platform.bytes_non_negative_silver_fact_network_usage_.afbe04dc6c"
+[0m14:01:44.410390 [debug] [Thread-1 (]: Began executing node test.telecom_cognitive_platform.bytes_non_negative_silver_fact_network_usage_.afbe04dc6c
+[0m14:01:44.411151 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.bytes_non_negative_silver_fact_network_usage_.afbe04dc6c
+[0m14:01:44.411640 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.not_null_silver_fact_network_usage_customer_key_hash.da9f185d9b
+[0m14:01:44.412234 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.telecom_cognitive_platform.bytes_non_negative_silver_fact_network_usage_.afbe04dc6c, now test.telecom_cognitive_platform.not_null_silver_fact_network_usage_customer_key_hash.da9f185d9b)
+[0m14:01:44.412734 [debug] [Thread-1 (]: Began compiling node test.telecom_cognitive_platform.not_null_silver_fact_network_usage_customer_key_hash.da9f185d9b
+[0m14:01:44.416720 [debug] [Thread-1 (]: Writing injected SQL for node "test.telecom_cognitive_platform.not_null_silver_fact_network_usage_customer_key_hash.da9f185d9b"
+[0m14:01:44.417426 [debug] [Thread-1 (]: Began executing node test.telecom_cognitive_platform.not_null_silver_fact_network_usage_customer_key_hash.da9f185d9b
+[0m14:01:44.418212 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.not_null_silver_fact_network_usage_customer_key_hash.da9f185d9b
+[0m14:01:44.418721 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.not_null_silver_fact_network_usage_total_bytes.104c6efcdd
+[0m14:01:44.419344 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.telecom_cognitive_platform.not_null_silver_fact_network_usage_customer_key_hash.da9f185d9b, now test.telecom_cognitive_platform.not_null_silver_fact_network_usage_total_bytes.104c6efcdd)
+[0m14:01:44.419803 [debug] [Thread-1 (]: Began compiling node test.telecom_cognitive_platform.not_null_silver_fact_network_usage_total_bytes.104c6efcdd
+[0m14:01:44.423741 [debug] [Thread-1 (]: Writing injected SQL for node "test.telecom_cognitive_platform.not_null_silver_fact_network_usage_total_bytes.104c6efcdd"
+[0m14:01:44.424493 [debug] [Thread-1 (]: Began executing node test.telecom_cognitive_platform.not_null_silver_fact_network_usage_total_bytes.104c6efcdd
+[0m14:01:44.425467 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.not_null_silver_fact_network_usage_total_bytes.104c6efcdd
+[0m14:01:44.426014 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.not_null_silver_fact_network_usage_usage_pk.75441be17e
+[0m14:01:44.427273 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.telecom_cognitive_platform.not_null_silver_fact_network_usage_total_bytes.104c6efcdd, now test.telecom_cognitive_platform.not_null_silver_fact_network_usage_usage_pk.75441be17e)
+[0m14:01:44.428215 [debug] [Thread-1 (]: Began compiling node test.telecom_cognitive_platform.not_null_silver_fact_network_usage_usage_pk.75441be17e
+[0m14:01:44.432528 [debug] [Thread-1 (]: Writing injected SQL for node "test.telecom_cognitive_platform.not_null_silver_fact_network_usage_usage_pk.75441be17e"
+[0m14:01:44.433290 [debug] [Thread-1 (]: Began executing node test.telecom_cognitive_platform.not_null_silver_fact_network_usage_usage_pk.75441be17e
+[0m14:01:44.434057 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.not_null_silver_fact_network_usage_usage_pk.75441be17e
+[0m14:01:44.434605 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.relationships_silver_fact_network_usage_customer_key_hash__customer_key_hash__ref_dim_customer_.852117840d
+[0m14:01:44.435250 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.telecom_cognitive_platform.not_null_silver_fact_network_usage_usage_pk.75441be17e, now test.telecom_cognitive_platform.relationships_silver_fact_network_usage_customer_key_hash__customer_key_hash__ref_dim_customer_.852117840d)
+[0m14:01:44.435737 [debug] [Thread-1 (]: Began compiling node test.telecom_cognitive_platform.relationships_silver_fact_network_usage_customer_key_hash__customer_key_hash__ref_dim_customer_.852117840d
+[0m14:01:44.445370 [debug] [Thread-1 (]: Writing injected SQL for node "test.telecom_cognitive_platform.relationships_silver_fact_network_usage_customer_key_hash__customer_key_hash__ref_dim_customer_.852117840d"
+[0m14:01:44.446138 [debug] [Thread-1 (]: Began executing node test.telecom_cognitive_platform.relationships_silver_fact_network_usage_customer_key_hash__customer_key_hash__ref_dim_customer_.852117840d
+[0m14:01:44.446951 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.relationships_silver_fact_network_usage_customer_key_hash__customer_key_hash__ref_dim_customer_.852117840d
+[0m14:01:44.447519 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.unique_silver_fact_network_usage_usage_pk.80bf80164f
+[0m14:01:44.448083 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.telecom_cognitive_platform.relationships_silver_fact_network_usage_customer_key_hash__customer_key_hash__ref_dim_customer_.852117840d, now test.telecom_cognitive_platform.unique_silver_fact_network_usage_usage_pk.80bf80164f)
+[0m14:01:44.448573 [debug] [Thread-1 (]: Began compiling node test.telecom_cognitive_platform.unique_silver_fact_network_usage_usage_pk.80bf80164f
+[0m14:01:44.452478 [debug] [Thread-1 (]: Writing injected SQL for node "test.telecom_cognitive_platform.unique_silver_fact_network_usage_usage_pk.80bf80164f"
+[0m14:01:44.453177 [debug] [Thread-1 (]: Began executing node test.telecom_cognitive_platform.unique_silver_fact_network_usage_usage_pk.80bf80164f
+[0m14:01:44.453954 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.unique_silver_fact_network_usage_usage_pk.80bf80164f
+[0m14:01:44.455208 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:01:44.455742 [debug] [MainThread]: Connection 'test.telecom_cognitive_platform.unique_silver_fact_network_usage_usage_pk.80bf80164f' was left open.
+[0m14:01:44.456204 [debug] [MainThread]: On test.telecom_cognitive_platform.unique_silver_fact_network_usage_usage_pk.80bf80164f: Close
+[0m14:01:44.459457 [debug] [MainThread]: Command end result
+[0m14:01:44.502837 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/Telecom-Cognitive-Platform/target/manifest.json
+[0m14:01:44.506653 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/Telecom-Cognitive-Platform/target/semantic_manifest.json
+[0m14:01:44.520079 [debug] [MainThread]: Wrote artifact RunExecutionResult to /workspaces/Telecom-Cognitive-Platform/target/run_results.json
+[0m14:01:44.522535 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": true, "command_wall_clock_time": 1.9965723, "process_in_blocks": "58584", "process_kernel_time": 0.260807, "process_mem_max_rss": "145324", "process_out_blocks": "2888", "process_user_time": 2.896543}
+[0m14:01:44.523245 [debug] [MainThread]: Command `dbt compile` succeeded at 14:01:44.523121 after 2.00 seconds
+[0m14:01:44.523769 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79ec40ffa210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79ec40ff9850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79ec40ff80b0>]}
+[0m14:01:44.525496 [debug] [MainThread]: Flushing usage events
+[0m14:01:44.928820 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:02:21.435548 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ce228c3d760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ce22aadbf80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ce227f21a90>]}
+
+
+============================== 14:02:21.440601 | 4122f0e0-9c13-441e-98c6-27629a423387 ==============================
+[0m14:02:21.440601 [info ] [MainThread]: Running with dbt=1.11.11
+[0m14:02:21.441737 [debug] [MainThread]: running dbt with arguments {'cache_selected_only': 'False', 'send_anonymous_usage_stats': 'True', 'debug': 'False', 'profiles_dir': './ci', 'fail_fast': 'False', 'version_check': 'True', 'indirect_selection': 'eager', 'no_print': 'None', 'use_colors': 'True', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True', 'log_format': 'default', 'use_experimental_parser': 'False', 'log_cache_events': 'False', 'static_parser': 'True', 'log_path': '/workspaces/Telecom-Cognitive-Platform/logs', 'introspect': 'True', 'invocation_command': 'dbt compile --profiles-dir ./ci', 'empty': 'False', 'target_path': 'None', 'write_json': 'True', 'printer_width': '80', 'warn_error': 'None'}
+[0m14:02:21.663395 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '4122f0e0-9c13-441e-98c6-27629a423387', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ce227c1b140>]}
+[0m14:02:21.731286 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '4122f0e0-9c13-441e-98c6-27629a423387', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ce227b73170>]}
+[0m14:02:21.732348 [info ] [MainThread]: Registered adapter: clickhouse=1.10.0
+[0m14:02:21.878974 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m14:02:22.015123 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m14:02:22.015677 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m14:02:22.016155 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m14:02:22.074526 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '4122f0e0-9c13-441e-98c6-27629a423387', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ce227b2d2e0>]}
+[0m14:02:22.191623 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/Telecom-Cognitive-Platform/target/manifest.json
+[0m14:02:22.193764 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/Telecom-Cognitive-Platform/target/semantic_manifest.json
+[0m14:02:22.202206 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4122f0e0-9c13-441e-98c6-27629a423387', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ce2278fac60>]}
+[0m14:02:22.202833 [info ] [MainThread]: Found 3 models, 15 data tests, 2 seeds, 524 macros
+[0m14:02:22.203401 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4122f0e0-9c13-441e-98c6-27629a423387', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ce2278b9910>]}
+[0m14:02:22.205984 [info ] [MainThread]: 
+[0m14:02:22.206551 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:02:22.207116 [info ] [MainThread]: 
+[0m14:02:22.207799 [debug] [MainThread]: Acquiring new clickhouse connection 'master'
+[0m14:02:22.216752 [debug] [ThreadPool]: Acquiring new clickhouse connection 'list__default'
+[0m14:02:22.230368 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:02:22.398964 [debug] [ThreadPool]: dbt_clickhouse adapter: On list__default: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "default", "target_name": "dev", "connection_name": "list__default"} */
+with mv_sources as (
+      -- Find all MVs and their target tables (database and name of the MV, plus the SELECT SQL)
+      select
+        name as mv_name,
+        database as mv_database,
+        any(as_select) as mv_sql,
+        any(replaceRegexpOne(create_table_query, '.*TO\\s+`?([^`\\s(]+)`?\\.`?([^`\\s(]+)`?.*', '\\1.\\2')) as target_fqn
+      
+      from system.tables
+      
+      where engine = 'MaterializedView'
+        and create_table_query like '%TO %'
+      group by mv_name, mv_database
+    )
+    select
+      t.name as name,
+      t.database as schema,
+      multiIf(
+        t.engine = 'MaterializedView', 'materialized_view',
+        t.engine = 'View', 'view',
+        t.engine = 'Dictionary', 'dictionary',
+        'table'
+      ) as type,
+      db.engine as db_engine,
+      groupArrayIf(
+        map('schema', mv_sources.mv_database, 'name', mv_sources.mv_name, 'sql', mv_sources.mv_sql),
+        mv_sources.mv_name != ''
+      ) as mvs_pointing_to_it,0 as is_on_cluster
+        from system.tables as t
+      
+        join system.databases as db on t.database = db.name
+        left join mv_sources on mv_sources.target_fqn = concat(t.database, '.', t.name)
+      where schema = 'default'
+      group by name, schema, type, db_engine
+
+  ...
+[0m14:02:22.411866 [debug] [ThreadPool]: dbt_clickhouse adapter: SQL status: OK in 0.01 seconds
+[0m14:02:22.438141 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4122f0e0-9c13-441e-98c6-27629a423387', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ce22aab8e30>]}
+[0m14:02:22.440658 [debug] [Thread-1 (]: Began running node model.telecom_cognitive_platform.stg_fact_network_usage
+[0m14:02:22.441550 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list__default, now model.telecom_cognitive_platform.stg_fact_network_usage)
+[0m14:02:22.443494 [debug] [Thread-1 (]: Began compiling node model.telecom_cognitive_platform.stg_fact_network_usage
+[0m14:02:22.459818 [debug] [Thread-1 (]: Writing injected SQL for node "model.telecom_cognitive_platform.stg_fact_network_usage"
+[0m14:02:22.463554 [debug] [Thread-1 (]: Began executing node model.telecom_cognitive_platform.stg_fact_network_usage
+[0m14:02:22.464512 [debug] [Thread-1 (]: Finished running node model.telecom_cognitive_platform.stg_fact_network_usage
+[0m14:02:22.465889 [debug] [Thread-1 (]: Began running node seed.telecom_cognitive_platform.network_usage_raw
+[0m14:02:22.467104 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.telecom_cognitive_platform.stg_fact_network_usage, now seed.telecom_cognitive_platform.network_usage_raw)
+[0m14:02:22.468216 [debug] [Thread-1 (]: Began compiling node seed.telecom_cognitive_platform.network_usage_raw
+[0m14:02:22.478496 [debug] [Thread-1 (]: Began executing node seed.telecom_cognitive_platform.network_usage_raw
+[0m14:02:22.483616 [debug] [Thread-1 (]: Finished running node seed.telecom_cognitive_platform.network_usage_raw
+[0m14:02:22.488483 [debug] [Thread-1 (]: Began running node seed.telecom_cognitive_platform.seed_network_usage
+[0m14:02:22.490437 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.telecom_cognitive_platform.network_usage_raw, now seed.telecom_cognitive_platform.seed_network_usage)
+[0m14:02:22.491353 [debug] [Thread-1 (]: Began compiling node seed.telecom_cognitive_platform.seed_network_usage
+[0m14:02:22.497796 [debug] [Thread-1 (]: Began executing node seed.telecom_cognitive_platform.seed_network_usage
+[0m14:02:22.498971 [debug] [Thread-1 (]: Finished running node seed.telecom_cognitive_platform.seed_network_usage
+[0m14:02:22.499542 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.sample_compliant
+[0m14:02:22.500158 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.telecom_cognitive_platform.seed_network_usage, now test.telecom_cognitive_platform.sample_compliant)
+[0m14:02:22.500619 [debug] [Thread-1 (]: Began compiling node test.telecom_cognitive_platform.sample_compliant
+[0m14:02:22.502635 [debug] [Thread-1 (]: Writing injected SQL for node "test.telecom_cognitive_platform.sample_compliant"
+[0m14:02:22.503366 [debug] [Thread-1 (]: Began executing node test.telecom_cognitive_platform.sample_compliant
+[0m14:02:22.504367 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.sample_compliant
+[0m14:02:22.504853 [debug] [Thread-1 (]: Began running node model.telecom_cognitive_platform.dim_customer
+[0m14:02:22.505440 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.telecom_cognitive_platform.sample_compliant, now model.telecom_cognitive_platform.dim_customer)
+[0m14:02:22.505936 [debug] [Thread-1 (]: Began compiling node model.telecom_cognitive_platform.dim_customer
+[0m14:02:22.508963 [debug] [Thread-1 (]: Writing injected SQL for node "model.telecom_cognitive_platform.dim_customer"
+[0m14:02:22.509676 [debug] [Thread-1 (]: Began executing node model.telecom_cognitive_platform.dim_customer
+[0m14:02:22.510435 [debug] [Thread-1 (]: Finished running node model.telecom_cognitive_platform.dim_customer
+[0m14:02:22.510946 [debug] [Thread-1 (]: Began running node model.telecom_cognitive_platform.silver_fact_network_usage
+[0m14:02:22.511654 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.telecom_cognitive_platform.dim_customer, now model.telecom_cognitive_platform.silver_fact_network_usage)
+[0m14:02:22.512278 [debug] [Thread-1 (]: Began compiling node model.telecom_cognitive_platform.silver_fact_network_usage
+[0m14:02:22.515533 [debug] [Thread-1 (]: Writing injected SQL for node "model.telecom_cognitive_platform.silver_fact_network_usage"
+[0m14:02:22.516232 [debug] [Thread-1 (]: Began executing node model.telecom_cognitive_platform.silver_fact_network_usage
+[0m14:02:22.517029 [debug] [Thread-1 (]: Finished running node model.telecom_cognitive_platform.silver_fact_network_usage
+[0m14:02:22.517532 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.bytes_non_negative_stg_fact_network_usage_.851f94137c
+[0m14:02:22.518173 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.telecom_cognitive_platform.silver_fact_network_usage, now test.telecom_cognitive_platform.bytes_non_negative_stg_fact_network_usage_.851f94137c)
+[0m14:02:22.518942 [debug] [Thread-1 (]: Began compiling node test.telecom_cognitive_platform.bytes_non_negative_stg_fact_network_usage_.851f94137c
+[0m14:02:22.527131 [debug] [Thread-1 (]: Writing injected SQL for node "test.telecom_cognitive_platform.bytes_non_negative_stg_fact_network_usage_.851f94137c"
+[0m14:02:22.527986 [debug] [Thread-1 (]: Began executing node test.telecom_cognitive_platform.bytes_non_negative_stg_fact_network_usage_.851f94137c
+[0m14:02:22.528887 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.bytes_non_negative_stg_fact_network_usage_.851f94137c
+[0m14:02:22.529463 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_bytes_dl.27ab51994f
+[0m14:02:22.530005 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.telecom_cognitive_platform.bytes_non_negative_stg_fact_network_usage_.851f94137c, now test.telecom_cognitive_platform.not_null_stg_fact_network_usage_bytes_dl.27ab51994f)
+[0m14:02:22.530505 [debug] [Thread-1 (]: Began compiling node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_bytes_dl.27ab51994f
+[0m14:02:22.539173 [debug] [Thread-1 (]: Writing injected SQL for node "test.telecom_cognitive_platform.not_null_stg_fact_network_usage_bytes_dl.27ab51994f"
+[0m14:02:22.540075 [debug] [Thread-1 (]: Began executing node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_bytes_dl.27ab51994f
+[0m14:02:22.540881 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_bytes_dl.27ab51994f
+[0m14:02:22.541426 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_bytes_ul.43978cf3c2
+[0m14:02:22.541924 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.telecom_cognitive_platform.not_null_stg_fact_network_usage_bytes_dl.27ab51994f, now test.telecom_cognitive_platform.not_null_stg_fact_network_usage_bytes_ul.43978cf3c2)
+[0m14:02:22.542385 [debug] [Thread-1 (]: Began compiling node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_bytes_ul.43978cf3c2
+[0m14:02:22.547728 [debug] [Thread-1 (]: Writing injected SQL for node "test.telecom_cognitive_platform.not_null_stg_fact_network_usage_bytes_ul.43978cf3c2"
+[0m14:02:22.548586 [debug] [Thread-1 (]: Began executing node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_bytes_ul.43978cf3c2
+[0m14:02:22.549418 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_bytes_ul.43978cf3c2
+[0m14:02:22.549945 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_customer_key_hash.4e37b9929a
+[0m14:02:22.550566 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.telecom_cognitive_platform.not_null_stg_fact_network_usage_bytes_ul.43978cf3c2, now test.telecom_cognitive_platform.not_null_stg_fact_network_usage_customer_key_hash.4e37b9929a)
+[0m14:02:22.551202 [debug] [Thread-1 (]: Began compiling node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_customer_key_hash.4e37b9929a
+[0m14:02:22.617556 [debug] [Thread-1 (]: Writing injected SQL for node "test.telecom_cognitive_platform.not_null_stg_fact_network_usage_customer_key_hash.4e37b9929a"
+[0m14:02:22.618454 [debug] [Thread-1 (]: Began executing node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_customer_key_hash.4e37b9929a
+[0m14:02:22.619364 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_customer_key_hash.4e37b9929a
+[0m14:02:22.619898 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_usage_pk.24207a32b9
+[0m14:02:22.620517 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.telecom_cognitive_platform.not_null_stg_fact_network_usage_customer_key_hash.4e37b9929a, now test.telecom_cognitive_platform.not_null_stg_fact_network_usage_usage_pk.24207a32b9)
+[0m14:02:22.621044 [debug] [Thread-1 (]: Began compiling node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_usage_pk.24207a32b9
+[0m14:02:22.625241 [debug] [Thread-1 (]: Writing injected SQL for node "test.telecom_cognitive_platform.not_null_stg_fact_network_usage_usage_pk.24207a32b9"
+[0m14:02:22.625999 [debug] [Thread-1 (]: Began executing node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_usage_pk.24207a32b9
+[0m14:02:22.626808 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_usage_pk.24207a32b9
+[0m14:02:22.627363 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.unique_stg_fact_network_usage_usage_pk.cb284a42a0
+[0m14:02:22.627985 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.telecom_cognitive_platform.not_null_stg_fact_network_usage_usage_pk.24207a32b9, now test.telecom_cognitive_platform.unique_stg_fact_network_usage_usage_pk.cb284a42a0)
+[0m14:02:22.628459 [debug] [Thread-1 (]: Began compiling node test.telecom_cognitive_platform.unique_stg_fact_network_usage_usage_pk.cb284a42a0
+[0m14:02:22.634682 [debug] [Thread-1 (]: Writing injected SQL for node "test.telecom_cognitive_platform.unique_stg_fact_network_usage_usage_pk.cb284a42a0"
+[0m14:02:22.635517 [debug] [Thread-1 (]: Began executing node test.telecom_cognitive_platform.unique_stg_fact_network_usage_usage_pk.cb284a42a0
+[0m14:02:22.636302 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.unique_stg_fact_network_usage_usage_pk.cb284a42a0
+[0m14:02:22.636813 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.not_null_dim_customer_customer_key_hash.dbc9d3ebe8
+[0m14:02:22.637447 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.telecom_cognitive_platform.unique_stg_fact_network_usage_usage_pk.cb284a42a0, now test.telecom_cognitive_platform.not_null_dim_customer_customer_key_hash.dbc9d3ebe8)
+[0m14:02:22.637956 [debug] [Thread-1 (]: Began compiling node test.telecom_cognitive_platform.not_null_dim_customer_customer_key_hash.dbc9d3ebe8
+[0m14:02:22.641928 [debug] [Thread-1 (]: Writing injected SQL for node "test.telecom_cognitive_platform.not_null_dim_customer_customer_key_hash.dbc9d3ebe8"
+[0m14:02:22.642657 [debug] [Thread-1 (]: Began executing node test.telecom_cognitive_platform.not_null_dim_customer_customer_key_hash.dbc9d3ebe8
+[0m14:02:22.643426 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.not_null_dim_customer_customer_key_hash.dbc9d3ebe8
+[0m14:02:22.643950 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.unique_dim_customer_customer_key_hash.f954ac283e
+[0m14:02:22.644456 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.telecom_cognitive_platform.not_null_dim_customer_customer_key_hash.dbc9d3ebe8, now test.telecom_cognitive_platform.unique_dim_customer_customer_key_hash.f954ac283e)
+[0m14:02:22.645063 [debug] [Thread-1 (]: Began compiling node test.telecom_cognitive_platform.unique_dim_customer_customer_key_hash.f954ac283e
+[0m14:02:22.649046 [debug] [Thread-1 (]: Writing injected SQL for node "test.telecom_cognitive_platform.unique_dim_customer_customer_key_hash.f954ac283e"
+[0m14:02:22.649768 [debug] [Thread-1 (]: Began executing node test.telecom_cognitive_platform.unique_dim_customer_customer_key_hash.f954ac283e
+[0m14:02:22.650574 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.unique_dim_customer_customer_key_hash.f954ac283e
+[0m14:02:22.651079 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.bytes_non_negative_silver_fact_network_usage_.afbe04dc6c
+[0m14:02:22.651643 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.telecom_cognitive_platform.unique_dim_customer_customer_key_hash.f954ac283e, now test.telecom_cognitive_platform.bytes_non_negative_silver_fact_network_usage_.afbe04dc6c)
+[0m14:02:22.652166 [debug] [Thread-1 (]: Began compiling node test.telecom_cognitive_platform.bytes_non_negative_silver_fact_network_usage_.afbe04dc6c
+[0m14:02:22.656085 [debug] [Thread-1 (]: Writing injected SQL for node "test.telecom_cognitive_platform.bytes_non_negative_silver_fact_network_usage_.afbe04dc6c"
+[0m14:02:22.656815 [debug] [Thread-1 (]: Began executing node test.telecom_cognitive_platform.bytes_non_negative_silver_fact_network_usage_.afbe04dc6c
+[0m14:02:22.657584 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.bytes_non_negative_silver_fact_network_usage_.afbe04dc6c
+[0m14:02:22.658181 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.not_null_silver_fact_network_usage_customer_key_hash.da9f185d9b
+[0m14:02:22.658874 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.telecom_cognitive_platform.bytes_non_negative_silver_fact_network_usage_.afbe04dc6c, now test.telecom_cognitive_platform.not_null_silver_fact_network_usage_customer_key_hash.da9f185d9b)
+[0m14:02:22.659385 [debug] [Thread-1 (]: Began compiling node test.telecom_cognitive_platform.not_null_silver_fact_network_usage_customer_key_hash.da9f185d9b
+[0m14:02:22.663669 [debug] [Thread-1 (]: Writing injected SQL for node "test.telecom_cognitive_platform.not_null_silver_fact_network_usage_customer_key_hash.da9f185d9b"
+[0m14:02:22.664455 [debug] [Thread-1 (]: Began executing node test.telecom_cognitive_platform.not_null_silver_fact_network_usage_customer_key_hash.da9f185d9b
+[0m14:02:22.665393 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.not_null_silver_fact_network_usage_customer_key_hash.da9f185d9b
+[0m14:02:22.665993 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.not_null_silver_fact_network_usage_total_bytes.104c6efcdd
+[0m14:02:22.666630 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.telecom_cognitive_platform.not_null_silver_fact_network_usage_customer_key_hash.da9f185d9b, now test.telecom_cognitive_platform.not_null_silver_fact_network_usage_total_bytes.104c6efcdd)
+[0m14:02:22.667201 [debug] [Thread-1 (]: Began compiling node test.telecom_cognitive_platform.not_null_silver_fact_network_usage_total_bytes.104c6efcdd
+[0m14:02:22.673961 [debug] [Thread-1 (]: Writing injected SQL for node "test.telecom_cognitive_platform.not_null_silver_fact_network_usage_total_bytes.104c6efcdd"
+[0m14:02:22.675013 [debug] [Thread-1 (]: Began executing node test.telecom_cognitive_platform.not_null_silver_fact_network_usage_total_bytes.104c6efcdd
+[0m14:02:22.676122 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.not_null_silver_fact_network_usage_total_bytes.104c6efcdd
+[0m14:02:22.676878 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.not_null_silver_fact_network_usage_usage_pk.75441be17e
+[0m14:02:22.677758 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.telecom_cognitive_platform.not_null_silver_fact_network_usage_total_bytes.104c6efcdd, now test.telecom_cognitive_platform.not_null_silver_fact_network_usage_usage_pk.75441be17e)
+[0m14:02:22.678550 [debug] [Thread-1 (]: Began compiling node test.telecom_cognitive_platform.not_null_silver_fact_network_usage_usage_pk.75441be17e
+[0m14:02:22.687646 [debug] [Thread-1 (]: Writing injected SQL for node "test.telecom_cognitive_platform.not_null_silver_fact_network_usage_usage_pk.75441be17e"
+[0m14:02:22.691461 [debug] [Thread-1 (]: Began executing node test.telecom_cognitive_platform.not_null_silver_fact_network_usage_usage_pk.75441be17e
+[0m14:02:22.694966 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.not_null_silver_fact_network_usage_usage_pk.75441be17e
+[0m14:02:22.695829 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.relationships_silver_fact_network_usage_customer_key_hash__customer_key_hash__ref_dim_customer_.852117840d
+[0m14:02:22.700561 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.telecom_cognitive_platform.not_null_silver_fact_network_usage_usage_pk.75441be17e, now test.telecom_cognitive_platform.relationships_silver_fact_network_usage_customer_key_hash__customer_key_hash__ref_dim_customer_.852117840d)
+[0m14:02:22.702499 [debug] [Thread-1 (]: Began compiling node test.telecom_cognitive_platform.relationships_silver_fact_network_usage_customer_key_hash__customer_key_hash__ref_dim_customer_.852117840d
+[0m14:02:22.724555 [debug] [Thread-1 (]: Writing injected SQL for node "test.telecom_cognitive_platform.relationships_silver_fact_network_usage_customer_key_hash__customer_key_hash__ref_dim_customer_.852117840d"
+[0m14:02:22.725839 [debug] [Thread-1 (]: Began executing node test.telecom_cognitive_platform.relationships_silver_fact_network_usage_customer_key_hash__customer_key_hash__ref_dim_customer_.852117840d
+[0m14:02:22.727245 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.relationships_silver_fact_network_usage_customer_key_hash__customer_key_hash__ref_dim_customer_.852117840d
+[0m14:02:22.728119 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.unique_silver_fact_network_usage_usage_pk.80bf80164f
+[0m14:02:22.729031 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.telecom_cognitive_platform.relationships_silver_fact_network_usage_customer_key_hash__customer_key_hash__ref_dim_customer_.852117840d, now test.telecom_cognitive_platform.unique_silver_fact_network_usage_usage_pk.80bf80164f)
+[0m14:02:22.729765 [debug] [Thread-1 (]: Began compiling node test.telecom_cognitive_platform.unique_silver_fact_network_usage_usage_pk.80bf80164f
+[0m14:02:22.736149 [debug] [Thread-1 (]: Writing injected SQL for node "test.telecom_cognitive_platform.unique_silver_fact_network_usage_usage_pk.80bf80164f"
+[0m14:02:22.737325 [debug] [Thread-1 (]: Began executing node test.telecom_cognitive_platform.unique_silver_fact_network_usage_usage_pk.80bf80164f
+[0m14:02:22.739055 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.unique_silver_fact_network_usage_usage_pk.80bf80164f
+[0m14:02:22.744938 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:02:22.749195 [debug] [MainThread]: Connection 'test.telecom_cognitive_platform.unique_silver_fact_network_usage_usage_pk.80bf80164f' was left open.
+[0m14:02:22.750303 [debug] [MainThread]: On test.telecom_cognitive_platform.unique_silver_fact_network_usage_usage_pk.80bf80164f: Close
+[0m14:02:22.755653 [debug] [MainThread]: Command end result
+[0m14:02:22.788645 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/Telecom-Cognitive-Platform/target/manifest.json
+[0m14:02:22.790883 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/Telecom-Cognitive-Platform/target/semantic_manifest.json
+[0m14:02:22.798308 [debug] [MainThread]: Wrote artifact RunExecutionResult to /workspaces/Telecom-Cognitive-Platform/target/run_results.json
+[0m14:02:22.799504 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": true, "command_wall_clock_time": 1.428328, "process_in_blocks": "16", "process_kernel_time": 0.232097, "process_mem_max_rss": "145436", "process_out_blocks": "2896", "process_user_time": 2.586936}
+[0m14:02:22.800153 [debug] [MainThread]: Command `dbt compile` succeeded at 14:02:22.800037 after 1.43 seconds
+[0m14:02:22.800633 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ce2255c89e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ce2255c84d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ce2255cbd70>]}
+[0m14:02:22.801159 [debug] [MainThread]: Flushing usage events
+[0m14:02:23.177171 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:11:13.856765 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x768560e3eb10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76856143b050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x768561943350>]}
+
+
+============================== 14:11:13.862183 | fbe03f14-18ba-4e86-9611-aa49eb7e78ad ==============================
+[0m14:11:13.862183 [info ] [MainThread]: Running with dbt=1.11.11
+[0m14:11:13.863770 [debug] [MainThread]: running dbt with arguments {'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt compile --profiles-dir ./ci', 'target_path': 'None', 'cache_selected_only': 'False', 'version_check': 'True', 'printer_width': '80', 'warn_error': 'None', 'use_colors': 'True', 'quiet': 'False', 'introspect': 'True', 'write_json': 'True', 'empty': 'False', 'profiles_dir': './ci', 'send_anonymous_usage_stats': 'True', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'partial_parse': 'True', 'debug': 'False', 'use_experimental_parser': 'False', 'static_parser': 'True', 'fail_fast': 'False', 'log_path': '/workspaces/Telecom-Cognitive-Platform/logs'}
+[0m14:11:14.081320 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'fbe03f14-18ba-4e86-9611-aa49eb7e78ad', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x768560f747a0>]}
+[0m14:11:14.147248 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'fbe03f14-18ba-4e86-9611-aa49eb7e78ad', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76856057dd30>]}
+[0m14:11:14.148240 [info ] [MainThread]: Registered adapter: clickhouse=1.10.0
+[0m14:11:14.310012 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m14:11:14.464284 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 1 files changed.
+[0m14:11:14.465042 [debug] [MainThread]: Partial parsing: added file: telecom_cognitive_platform://models/silver/audit_reconciliation.sql
+[0m14:11:14.465748 [debug] [MainThread]: Partial parsing: updated file: telecom_cognitive_platform://models/silver/silver_fact_network_usage.sql
+[0m14:11:14.466235 [debug] [MainThread]: Partial parsing: updated file: telecom_cognitive_platform://models/core/dim_customer.sql
+[0m14:11:15.003441 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'fbe03f14-18ba-4e86-9611-aa49eb7e78ad', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76855fe41af0>]}
+[0m14:11:15.132004 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/Telecom-Cognitive-Platform/target/manifest.json
+[0m14:11:15.134964 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/Telecom-Cognitive-Platform/target/semantic_manifest.json
+[0m14:11:15.143272 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'fbe03f14-18ba-4e86-9611-aa49eb7e78ad', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76855ffcfbc0>]}
+[0m14:11:15.143990 [info ] [MainThread]: Found 4 models, 15 data tests, 2 seeds, 524 macros
+[0m14:11:15.144606 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'fbe03f14-18ba-4e86-9611-aa49eb7e78ad', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76856019aa80>]}
+[0m14:11:15.147048 [info ] [MainThread]: 
+[0m14:11:15.147627 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:11:15.148131 [info ] [MainThread]: 
+[0m14:11:15.148792 [debug] [MainThread]: Acquiring new clickhouse connection 'master'
+[0m14:11:15.156818 [debug] [ThreadPool]: Acquiring new clickhouse connection 'list__default'
+[0m14:11:15.168525 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:11:15.309424 [debug] [ThreadPool]: dbt_clickhouse adapter: Got a retryable error when attempting to open a clickhouse connection.
+1 attempts remaining. Retrying in 1 seconds.
+Error:
+Code: 210. Connection refused (localhost:9000)
+[0m14:11:16.316213 [debug] [ThreadPool]: dbt_clickhouse adapter: Error running SQL: macro list_relations_without_caching
+[0m14:11:16.319952 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:11:16.321353 [debug] [MainThread]: Connection 'list__default' was left open.
+[0m14:11:16.322689 [debug] [MainThread]: On list__default: No close available on handle
+[0m14:11:16.323628 [error] [MainThread]: Encountered an error:
+Database Error
+  Code: 210. Connection refused (localhost:9000)
+[0m14:11:16.327437 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": false, "command_wall_clock_time": 2.535145, "process_in_blocks": "616", "process_kernel_time": 0.199701, "process_mem_max_rss": "145776", "process_out_blocks": "2616", "process_user_time": 2.716338}
+[0m14:11:16.328838 [debug] [MainThread]: Command `dbt compile` failed at 14:11:16.328670 after 2.54 seconds
+[0m14:11:16.329697 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x768560a3c7a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76855fdac3e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76856010b110>]}
+[0m14:11:16.330550 [debug] [MainThread]: Flushing usage events
+[0m14:11:16.726954 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:12:02.641580 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b32f25aaa20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b32f077b740>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b32f07793d0>]}
+
+
+============================== 14:12:02.647521 | 22d18fdb-9e65-4cbb-af08-64492c3f1c76 ==============================
+[0m14:12:02.647521 [info ] [MainThread]: Running with dbt=1.11.11
+[0m14:12:02.648729 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'quiet': 'False', 'profiles_dir': './ci', 'use_colors': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_format': 'default', 'empty': 'False', 'invocation_command': 'dbt compile --profiles-dir ./ci', 'log_path': '/workspaces/Telecom-Cognitive-Platform/logs', 'write_json': 'True', 'debug': 'False', 'version_check': 'True', 'indirect_selection': 'eager', 'target_path': 'None', 'cache_selected_only': 'False', 'send_anonymous_usage_stats': 'True', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'log_cache_events': 'False', 'no_print': 'None', 'fail_fast': 'False', 'warn_error': 'None', 'introspect': 'True', 'printer_width': '80'}
+[0m14:12:02.877847 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '22d18fdb-9e65-4cbb-af08-64492c3f1c76', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b32f05759a0>]}
+[0m14:12:02.967507 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '22d18fdb-9e65-4cbb-af08-64492c3f1c76', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b32f139bd70>]}
+[0m14:12:02.969041 [info ] [MainThread]: Registered adapter: clickhouse=1.10.0
+[0m14:12:03.096253 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m14:12:03.237843 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m14:12:03.238439 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m14:12:03.238877 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m14:12:03.296934 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '22d18fdb-9e65-4cbb-af08-64492c3f1c76', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b32f0691c10>]}
+[0m14:12:03.404273 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/Telecom-Cognitive-Platform/target/manifest.json
+[0m14:12:03.406488 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/Telecom-Cognitive-Platform/target/semantic_manifest.json
+[0m14:12:03.414674 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '22d18fdb-9e65-4cbb-af08-64492c3f1c76', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b32f02562d0>]}
+[0m14:12:03.415325 [info ] [MainThread]: Found 4 models, 15 data tests, 2 seeds, 524 macros
+[0m14:12:03.415927 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '22d18fdb-9e65-4cbb-af08-64492c3f1c76', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b32f10a1430>]}
+[0m14:12:03.418391 [info ] [MainThread]: 
+[0m14:12:03.418951 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:12:03.419431 [info ] [MainThread]: 
+[0m14:12:03.420089 [debug] [MainThread]: Acquiring new clickhouse connection 'master'
+[0m14:12:03.428253 [debug] [ThreadPool]: Acquiring new clickhouse connection 'list__default'
+[0m14:12:03.441158 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:12:03.613467 [debug] [ThreadPool]: dbt_clickhouse adapter: On list__default: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "default", "target_name": "dev", "connection_name": "list__default"} */
+with mv_sources as (
+      -- Find all MVs and their target tables (database and name of the MV, plus the SELECT SQL)
+      select
+        name as mv_name,
+        database as mv_database,
+        any(as_select) as mv_sql,
+        any(replaceRegexpOne(create_table_query, '.*TO\\s+`?([^`\\s(]+)`?\\.`?([^`\\s(]+)`?.*', '\\1.\\2')) as target_fqn
+      
+      from system.tables
+      
+      where engine = 'MaterializedView'
+        and create_table_query like '%TO %'
+      group by mv_name, mv_database
+    )
+    select
+      t.name as name,
+      t.database as schema,
+      multiIf(
+        t.engine = 'MaterializedView', 'materialized_view',
+        t.engine = 'View', 'view',
+        t.engine = 'Dictionary', 'dictionary',
+        'table'
+      ) as type,
+      db.engine as db_engine,
+      groupArrayIf(
+        map('schema', mv_sources.mv_database, 'name', mv_sources.mv_name, 'sql', mv_sources.mv_sql),
+        mv_sources.mv_name != ''
+      ) as mvs_pointing_to_it,0 as is_on_cluster
+        from system.tables as t
+      
+        join system.databases as db on t.database = db.name
+        left join mv_sources on mv_sources.target_fqn = concat(t.database, '.', t.name)
+      where schema = 'default'
+      group by name, schema, type, db_engine
+
+  ...
+[0m14:12:03.629342 [debug] [ThreadPool]: dbt_clickhouse adapter: SQL status: OK in 0.01 seconds
+[0m14:12:03.651221 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '22d18fdb-9e65-4cbb-af08-64492c3f1c76', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b32f3668f20>]}
+[0m14:12:03.653604 [debug] [Thread-1 (]: Began running node model.telecom_cognitive_platform.stg_fact_network_usage
+[0m14:12:03.654308 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list__default, now model.telecom_cognitive_platform.stg_fact_network_usage)
+[0m14:12:03.654800 [debug] [Thread-1 (]: Began compiling node model.telecom_cognitive_platform.stg_fact_network_usage
+[0m14:12:03.661096 [debug] [Thread-1 (]: Writing injected SQL for node "model.telecom_cognitive_platform.stg_fact_network_usage"
+[0m14:12:03.661825 [debug] [Thread-1 (]: Began executing node model.telecom_cognitive_platform.stg_fact_network_usage
+[0m14:12:03.662659 [debug] [Thread-1 (]: Finished running node model.telecom_cognitive_platform.stg_fact_network_usage
+[0m14:12:03.663272 [debug] [Thread-1 (]: Began running node seed.telecom_cognitive_platform.network_usage_raw
+[0m14:12:03.663957 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.telecom_cognitive_platform.stg_fact_network_usage, now seed.telecom_cognitive_platform.network_usage_raw)
+[0m14:12:03.664484 [debug] [Thread-1 (]: Began compiling node seed.telecom_cognitive_platform.network_usage_raw
+[0m14:12:03.666731 [debug] [Thread-1 (]: Began executing node seed.telecom_cognitive_platform.network_usage_raw
+[0m14:12:03.667532 [debug] [Thread-1 (]: Finished running node seed.telecom_cognitive_platform.network_usage_raw
+[0m14:12:03.668031 [debug] [Thread-1 (]: Began running node seed.telecom_cognitive_platform.seed_network_usage
+[0m14:12:03.668530 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.telecom_cognitive_platform.network_usage_raw, now seed.telecom_cognitive_platform.seed_network_usage)
+[0m14:12:03.669079 [debug] [Thread-1 (]: Began compiling node seed.telecom_cognitive_platform.seed_network_usage
+[0m14:12:03.670984 [debug] [Thread-1 (]: Began executing node seed.telecom_cognitive_platform.seed_network_usage
+[0m14:12:03.671838 [debug] [Thread-1 (]: Finished running node seed.telecom_cognitive_platform.seed_network_usage
+[0m14:12:03.672421 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.sample_compliant
+[0m14:12:03.673008 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.telecom_cognitive_platform.seed_network_usage, now test.telecom_cognitive_platform.sample_compliant)
+[0m14:12:03.673497 [debug] [Thread-1 (]: Began compiling node test.telecom_cognitive_platform.sample_compliant
+[0m14:12:03.675412 [debug] [Thread-1 (]: Writing injected SQL for node "test.telecom_cognitive_platform.sample_compliant"
+[0m14:12:03.676088 [debug] [Thread-1 (]: Began executing node test.telecom_cognitive_platform.sample_compliant
+[0m14:12:03.677030 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.sample_compliant
+[0m14:12:03.677560 [debug] [Thread-1 (]: Began running node model.telecom_cognitive_platform.dim_customer
+[0m14:12:03.678118 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.telecom_cognitive_platform.sample_compliant, now model.telecom_cognitive_platform.dim_customer)
+[0m14:12:03.678569 [debug] [Thread-1 (]: Began compiling node model.telecom_cognitive_platform.dim_customer
+[0m14:12:03.681352 [debug] [Thread-1 (]: Writing injected SQL for node "model.telecom_cognitive_platform.dim_customer"
+[0m14:12:03.682018 [debug] [Thread-1 (]: Began executing node model.telecom_cognitive_platform.dim_customer
+[0m14:12:03.682770 [debug] [Thread-1 (]: Finished running node model.telecom_cognitive_platform.dim_customer
+[0m14:12:03.683317 [debug] [Thread-1 (]: Began running node model.telecom_cognitive_platform.silver_fact_network_usage
+[0m14:12:03.683824 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.telecom_cognitive_platform.dim_customer, now model.telecom_cognitive_platform.silver_fact_network_usage)
+[0m14:12:03.684615 [debug] [Thread-1 (]: Began compiling node model.telecom_cognitive_platform.silver_fact_network_usage
+[0m14:12:03.687411 [debug] [Thread-1 (]: Writing injected SQL for node "model.telecom_cognitive_platform.silver_fact_network_usage"
+[0m14:12:03.688126 [debug] [Thread-1 (]: Began executing node model.telecom_cognitive_platform.silver_fact_network_usage
+[0m14:12:03.688856 [debug] [Thread-1 (]: Finished running node model.telecom_cognitive_platform.silver_fact_network_usage
+[0m14:12:03.689379 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.bytes_non_negative_stg_fact_network_usage_.851f94137c
+[0m14:12:03.690009 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.telecom_cognitive_platform.silver_fact_network_usage, now test.telecom_cognitive_platform.bytes_non_negative_stg_fact_network_usage_.851f94137c)
+[0m14:12:03.690493 [debug] [Thread-1 (]: Began compiling node test.telecom_cognitive_platform.bytes_non_negative_stg_fact_network_usage_.851f94137c
+[0m14:12:03.698237 [debug] [Thread-1 (]: Writing injected SQL for node "test.telecom_cognitive_platform.bytes_non_negative_stg_fact_network_usage_.851f94137c"
+[0m14:12:03.698934 [debug] [Thread-1 (]: Began executing node test.telecom_cognitive_platform.bytes_non_negative_stg_fact_network_usage_.851f94137c
+[0m14:12:03.699660 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.bytes_non_negative_stg_fact_network_usage_.851f94137c
+[0m14:12:03.700157 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_bytes_dl.27ab51994f
+[0m14:12:03.700654 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.telecom_cognitive_platform.bytes_non_negative_stg_fact_network_usage_.851f94137c, now test.telecom_cognitive_platform.not_null_stg_fact_network_usage_bytes_dl.27ab51994f)
+[0m14:12:03.701187 [debug] [Thread-1 (]: Began compiling node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_bytes_dl.27ab51994f
+[0m14:12:03.710197 [debug] [Thread-1 (]: Writing injected SQL for node "test.telecom_cognitive_platform.not_null_stg_fact_network_usage_bytes_dl.27ab51994f"
+[0m14:12:03.710909 [debug] [Thread-1 (]: Began executing node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_bytes_dl.27ab51994f
+[0m14:12:03.711649 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_bytes_dl.27ab51994f
+[0m14:12:03.712144 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_bytes_ul.43978cf3c2
+[0m14:12:03.712631 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.telecom_cognitive_platform.not_null_stg_fact_network_usage_bytes_dl.27ab51994f, now test.telecom_cognitive_platform.not_null_stg_fact_network_usage_bytes_ul.43978cf3c2)
+[0m14:12:03.713224 [debug] [Thread-1 (]: Began compiling node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_bytes_ul.43978cf3c2
+[0m14:12:03.774164 [debug] [Thread-1 (]: Writing injected SQL for node "test.telecom_cognitive_platform.not_null_stg_fact_network_usage_bytes_ul.43978cf3c2"
+[0m14:12:03.775019 [debug] [Thread-1 (]: Began executing node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_bytes_ul.43978cf3c2
+[0m14:12:03.775886 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_bytes_ul.43978cf3c2
+[0m14:12:03.776384 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_customer_key_hash.4e37b9929a
+[0m14:12:03.776980 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.telecom_cognitive_platform.not_null_stg_fact_network_usage_bytes_ul.43978cf3c2, now test.telecom_cognitive_platform.not_null_stg_fact_network_usage_customer_key_hash.4e37b9929a)
+[0m14:12:03.777474 [debug] [Thread-1 (]: Began compiling node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_customer_key_hash.4e37b9929a
+[0m14:12:03.781338 [debug] [Thread-1 (]: Writing injected SQL for node "test.telecom_cognitive_platform.not_null_stg_fact_network_usage_customer_key_hash.4e37b9929a"
+[0m14:12:03.782031 [debug] [Thread-1 (]: Began executing node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_customer_key_hash.4e37b9929a
+[0m14:12:03.782913 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_customer_key_hash.4e37b9929a
+[0m14:12:03.783448 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_usage_pk.24207a32b9
+[0m14:12:03.783960 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.telecom_cognitive_platform.not_null_stg_fact_network_usage_customer_key_hash.4e37b9929a, now test.telecom_cognitive_platform.not_null_stg_fact_network_usage_usage_pk.24207a32b9)
+[0m14:12:03.784511 [debug] [Thread-1 (]: Began compiling node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_usage_pk.24207a32b9
+[0m14:12:03.788338 [debug] [Thread-1 (]: Writing injected SQL for node "test.telecom_cognitive_platform.not_null_stg_fact_network_usage_usage_pk.24207a32b9"
+[0m14:12:03.789000 [debug] [Thread-1 (]: Began executing node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_usage_pk.24207a32b9
+[0m14:12:03.789727 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_usage_pk.24207a32b9
+[0m14:12:03.790229 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.unique_stg_fact_network_usage_usage_pk.cb284a42a0
+[0m14:12:03.790737 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.telecom_cognitive_platform.not_null_stg_fact_network_usage_usage_pk.24207a32b9, now test.telecom_cognitive_platform.unique_stg_fact_network_usage_usage_pk.cb284a42a0)
+[0m14:12:03.791281 [debug] [Thread-1 (]: Began compiling node test.telecom_cognitive_platform.unique_stg_fact_network_usage_usage_pk.cb284a42a0
+[0m14:12:03.797325 [debug] [Thread-1 (]: Writing injected SQL for node "test.telecom_cognitive_platform.unique_stg_fact_network_usage_usage_pk.cb284a42a0"
+[0m14:12:03.798025 [debug] [Thread-1 (]: Began executing node test.telecom_cognitive_platform.unique_stg_fact_network_usage_usage_pk.cb284a42a0
+[0m14:12:03.798760 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.unique_stg_fact_network_usage_usage_pk.cb284a42a0
+[0m14:12:03.799266 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.not_null_dim_customer_customer_key_hash.dbc9d3ebe8
+[0m14:12:03.799822 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.telecom_cognitive_platform.unique_stg_fact_network_usage_usage_pk.cb284a42a0, now test.telecom_cognitive_platform.not_null_dim_customer_customer_key_hash.dbc9d3ebe8)
+[0m14:12:03.800331 [debug] [Thread-1 (]: Began compiling node test.telecom_cognitive_platform.not_null_dim_customer_customer_key_hash.dbc9d3ebe8
+[0m14:12:03.804062 [debug] [Thread-1 (]: Writing injected SQL for node "test.telecom_cognitive_platform.not_null_dim_customer_customer_key_hash.dbc9d3ebe8"
+[0m14:12:03.804750 [debug] [Thread-1 (]: Began executing node test.telecom_cognitive_platform.not_null_dim_customer_customer_key_hash.dbc9d3ebe8
+[0m14:12:03.805548 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.not_null_dim_customer_customer_key_hash.dbc9d3ebe8
+[0m14:12:03.806116 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.unique_dim_customer_customer_key_hash.f954ac283e
+[0m14:12:03.806665 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.telecom_cognitive_platform.not_null_dim_customer_customer_key_hash.dbc9d3ebe8, now test.telecom_cognitive_platform.unique_dim_customer_customer_key_hash.f954ac283e)
+[0m14:12:03.807321 [debug] [Thread-1 (]: Began compiling node test.telecom_cognitive_platform.unique_dim_customer_customer_key_hash.f954ac283e
+[0m14:12:03.811061 [debug] [Thread-1 (]: Writing injected SQL for node "test.telecom_cognitive_platform.unique_dim_customer_customer_key_hash.f954ac283e"
+[0m14:12:03.811725 [debug] [Thread-1 (]: Began executing node test.telecom_cognitive_platform.unique_dim_customer_customer_key_hash.f954ac283e
+[0m14:12:03.812478 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.unique_dim_customer_customer_key_hash.f954ac283e
+[0m14:12:03.812991 [debug] [Thread-1 (]: Began running node model.telecom_cognitive_platform.audit_reconciliation
+[0m14:12:03.813523 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.telecom_cognitive_platform.unique_dim_customer_customer_key_hash.f954ac283e, now model.telecom_cognitive_platform.audit_reconciliation)
+[0m14:12:03.813993 [debug] [Thread-1 (]: Began compiling node model.telecom_cognitive_platform.audit_reconciliation
+[0m14:12:03.817011 [debug] [Thread-1 (]: Writing injected SQL for node "model.telecom_cognitive_platform.audit_reconciliation"
+[0m14:12:03.817698 [debug] [Thread-1 (]: Began executing node model.telecom_cognitive_platform.audit_reconciliation
+[0m14:12:03.818444 [debug] [Thread-1 (]: Finished running node model.telecom_cognitive_platform.audit_reconciliation
+[0m14:12:03.818959 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.bytes_non_negative_silver_fact_network_usage_.afbe04dc6c
+[0m14:12:03.819512 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.telecom_cognitive_platform.audit_reconciliation, now test.telecom_cognitive_platform.bytes_non_negative_silver_fact_network_usage_.afbe04dc6c)
+[0m14:12:03.819987 [debug] [Thread-1 (]: Began compiling node test.telecom_cognitive_platform.bytes_non_negative_silver_fact_network_usage_.afbe04dc6c
+[0m14:12:03.823474 [debug] [Thread-1 (]: Writing injected SQL for node "test.telecom_cognitive_platform.bytes_non_negative_silver_fact_network_usage_.afbe04dc6c"
+[0m14:12:03.824172 [debug] [Thread-1 (]: Began executing node test.telecom_cognitive_platform.bytes_non_negative_silver_fact_network_usage_.afbe04dc6c
+[0m14:12:03.824945 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.bytes_non_negative_silver_fact_network_usage_.afbe04dc6c
+[0m14:12:03.825532 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.not_null_silver_fact_network_usage_customer_key_hash.da9f185d9b
+[0m14:12:03.826156 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.telecom_cognitive_platform.bytes_non_negative_silver_fact_network_usage_.afbe04dc6c, now test.telecom_cognitive_platform.not_null_silver_fact_network_usage_customer_key_hash.da9f185d9b)
+[0m14:12:03.826885 [debug] [Thread-1 (]: Began compiling node test.telecom_cognitive_platform.not_null_silver_fact_network_usage_customer_key_hash.da9f185d9b
+[0m14:12:03.830562 [debug] [Thread-1 (]: Writing injected SQL for node "test.telecom_cognitive_platform.not_null_silver_fact_network_usage_customer_key_hash.da9f185d9b"
+[0m14:12:03.831219 [debug] [Thread-1 (]: Began executing node test.telecom_cognitive_platform.not_null_silver_fact_network_usage_customer_key_hash.da9f185d9b
+[0m14:12:03.831947 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.not_null_silver_fact_network_usage_customer_key_hash.da9f185d9b
+[0m14:12:03.832434 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.not_null_silver_fact_network_usage_total_bytes.104c6efcdd
+[0m14:12:03.832978 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.telecom_cognitive_platform.not_null_silver_fact_network_usage_customer_key_hash.da9f185d9b, now test.telecom_cognitive_platform.not_null_silver_fact_network_usage_total_bytes.104c6efcdd)
+[0m14:12:03.833486 [debug] [Thread-1 (]: Began compiling node test.telecom_cognitive_platform.not_null_silver_fact_network_usage_total_bytes.104c6efcdd
+[0m14:12:03.839006 [debug] [Thread-1 (]: Writing injected SQL for node "test.telecom_cognitive_platform.not_null_silver_fact_network_usage_total_bytes.104c6efcdd"
+[0m14:12:03.840021 [debug] [Thread-1 (]: Began executing node test.telecom_cognitive_platform.not_null_silver_fact_network_usage_total_bytes.104c6efcdd
+[0m14:12:03.841192 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.not_null_silver_fact_network_usage_total_bytes.104c6efcdd
+[0m14:12:03.842078 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.not_null_silver_fact_network_usage_usage_pk.75441be17e
+[0m14:12:03.842638 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.telecom_cognitive_platform.not_null_silver_fact_network_usage_total_bytes.104c6efcdd, now test.telecom_cognitive_platform.not_null_silver_fact_network_usage_usage_pk.75441be17e)
+[0m14:12:03.843141 [debug] [Thread-1 (]: Began compiling node test.telecom_cognitive_platform.not_null_silver_fact_network_usage_usage_pk.75441be17e
+[0m14:12:03.847326 [debug] [Thread-1 (]: Writing injected SQL for node "test.telecom_cognitive_platform.not_null_silver_fact_network_usage_usage_pk.75441be17e"
+[0m14:12:03.847994 [debug] [Thread-1 (]: Began executing node test.telecom_cognitive_platform.not_null_silver_fact_network_usage_usage_pk.75441be17e
+[0m14:12:03.848728 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.not_null_silver_fact_network_usage_usage_pk.75441be17e
+[0m14:12:03.849286 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.relationships_silver_fact_network_usage_customer_key_hash__customer_key_hash__ref_dim_customer_.852117840d
+[0m14:12:03.849853 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.telecom_cognitive_platform.not_null_silver_fact_network_usage_usage_pk.75441be17e, now test.telecom_cognitive_platform.relationships_silver_fact_network_usage_customer_key_hash__customer_key_hash__ref_dim_customer_.852117840d)
+[0m14:12:03.850508 [debug] [Thread-1 (]: Began compiling node test.telecom_cognitive_platform.relationships_silver_fact_network_usage_customer_key_hash__customer_key_hash__ref_dim_customer_.852117840d
+[0m14:12:03.859015 [debug] [Thread-1 (]: Writing injected SQL for node "test.telecom_cognitive_platform.relationships_silver_fact_network_usage_customer_key_hash__customer_key_hash__ref_dim_customer_.852117840d"
+[0m14:12:03.859726 [debug] [Thread-1 (]: Began executing node test.telecom_cognitive_platform.relationships_silver_fact_network_usage_customer_key_hash__customer_key_hash__ref_dim_customer_.852117840d
+[0m14:12:03.860499 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.relationships_silver_fact_network_usage_customer_key_hash__customer_key_hash__ref_dim_customer_.852117840d
+[0m14:12:03.861028 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.unique_silver_fact_network_usage_usage_pk.80bf80164f
+[0m14:12:03.861612 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.telecom_cognitive_platform.relationships_silver_fact_network_usage_customer_key_hash__customer_key_hash__ref_dim_customer_.852117840d, now test.telecom_cognitive_platform.unique_silver_fact_network_usage_usage_pk.80bf80164f)
+[0m14:12:03.862114 [debug] [Thread-1 (]: Began compiling node test.telecom_cognitive_platform.unique_silver_fact_network_usage_usage_pk.80bf80164f
+[0m14:12:03.866030 [debug] [Thread-1 (]: Writing injected SQL for node "test.telecom_cognitive_platform.unique_silver_fact_network_usage_usage_pk.80bf80164f"
+[0m14:12:03.866740 [debug] [Thread-1 (]: Began executing node test.telecom_cognitive_platform.unique_silver_fact_network_usage_usage_pk.80bf80164f
+[0m14:12:03.867550 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.unique_silver_fact_network_usage_usage_pk.80bf80164f
+[0m14:12:03.868691 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:12:03.869160 [debug] [MainThread]: Connection 'test.telecom_cognitive_platform.unique_silver_fact_network_usage_usage_pk.80bf80164f' was left open.
+[0m14:12:03.869581 [debug] [MainThread]: On test.telecom_cognitive_platform.unique_silver_fact_network_usage_usage_pk.80bf80164f: Close
+[0m14:12:03.873181 [debug] [MainThread]: Command end result
+[0m14:12:03.906958 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/Telecom-Cognitive-Platform/target/manifest.json
+[0m14:12:03.909103 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/Telecom-Cognitive-Platform/target/semantic_manifest.json
+[0m14:12:03.916419 [debug] [MainThread]: Wrote artifact RunExecutionResult to /workspaces/Telecom-Cognitive-Platform/target/run_results.json
+[0m14:12:03.917557 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": true, "command_wall_clock_time": 1.3441525, "process_in_blocks": "0", "process_kernel_time": 0.217345, "process_mem_max_rss": "146092", "process_out_blocks": "2928", "process_user_time": 2.630969}
+[0m14:12:03.918160 [debug] [MainThread]: Command `dbt compile` succeeded at 14:12:03.918052 after 1.34 seconds
+[0m14:12:03.918618 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b32ec7aaba0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b32ec7a8740>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b32ec7aa000>]}
+[0m14:12:03.919103 [debug] [MainThread]: Flushing usage events
+[0m14:12:04.308153 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:20:31.183329 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c422cd68770>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c422aecc830>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c422aeccb30>]}
+
+
+============================== 14:20:31.190106 | 35bb7866-6d57-4ecd-9133-ee1dbad0b7aa ==============================
+[0m14:20:31.190106 [info ] [MainThread]: Running with dbt=1.11.11
+[0m14:20:31.191378 [debug] [MainThread]: running dbt with arguments {'log_format': 'default', 'empty': 'None', 'profiles_dir': './ci', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt test --profiles-dir ./ci --models audit_reconciliation', 'debug': 'False', 'no_print': 'None', 'fail_fast': 'False', 'introspect': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'write_json': 'True', 'log_cache_events': 'False', 'warn_error': 'None', 'printer_width': '80', 'use_experimental_parser': 'False', 'static_parser': 'True', 'log_path': '/workspaces/Telecom-Cognitive-Platform/logs', 'partial_parse': 'True', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'use_colors': 'True'}
+[0m14:20:31.192361 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+Usage of `--models`, `--model`, and `-m` is deprecated in favor of `--select` or
+`-s`.
+[0m14:20:31.193301 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '35bb7866-6d57-4ecd-9133-ee1dbad0b7aa', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c422a11e150>]}
+[0m14:20:31.416237 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '35bb7866-6d57-4ecd-9133-ee1dbad0b7aa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c4229c71dc0>]}
+[0m14:20:31.484168 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '35bb7866-6d57-4ecd-9133-ee1dbad0b7aa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c422a08c3e0>]}
+[0m14:20:31.485195 [info ] [MainThread]: Registered adapter: clickhouse=1.10.0
+[0m14:20:31.616298 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m14:20:31.796793 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 1 files changed.
+[0m14:20:31.797582 [debug] [MainThread]: Partial parsing: added file: telecom_cognitive_platform://macros/test_no_rows.sql
+[0m14:20:31.798221 [debug] [MainThread]: Partial parsing: updated file: telecom_cognitive_platform://models/silver/schema.yml
+[0m14:20:32.281285 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '35bb7866-6d57-4ecd-9133-ee1dbad0b7aa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c4229753ec0>]}
+[0m14:20:32.620436 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/Telecom-Cognitive-Platform/target/manifest.json
+[0m14:20:32.623799 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/Telecom-Cognitive-Platform/target/semantic_manifest.json
+[0m14:20:32.691193 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '35bb7866-6d57-4ecd-9133-ee1dbad0b7aa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c4229941a30>]}
+[0m14:20:32.692182 [info ] [MainThread]: Found 4 models, 16 data tests, 2 seeds, 525 macros
+[0m14:20:32.695232 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '35bb7866-6d57-4ecd-9133-ee1dbad0b7aa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c4229a0a9f0>]}
+[0m14:20:32.699466 [info ] [MainThread]: 
+[0m14:20:32.703527 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:20:32.704535 [info ] [MainThread]: 
+[0m14:20:32.707259 [debug] [MainThread]: Acquiring new clickhouse connection 'master'
+[0m14:20:32.733706 [debug] [ThreadPool]: Acquiring new clickhouse connection 'list__default'
+[0m14:20:32.776983 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:20:33.091982 [debug] [ThreadPool]: dbt_clickhouse adapter: On list__default: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "default", "target_name": "dev", "connection_name": "list__default"} */
+with mv_sources as (
+      -- Find all MVs and their target tables (database and name of the MV, plus the SELECT SQL)
+      select
+        name as mv_name,
+        database as mv_database,
+        any(as_select) as mv_sql,
+        any(replaceRegexpOne(create_table_query, '.*TO\\s+`?([^`\\s(]+)`?\\.`?([^`\\s(]+)`?.*', '\\1.\\2')) as target_fqn
+      
+      from system.tables
+      
+      where engine = 'MaterializedView'
+        and create_table_query like '%TO %'
+      group by mv_name, mv_database
+    )
+    select
+      t.name as name,
+      t.database as schema,
+      multiIf(
+        t.engine = 'MaterializedView', 'materialized_view',
+        t.engine = 'View', 'view',
+        t.engine = 'Dictionary', 'dictionary',
+        'table'
+      ) as type,
+      db.engine as db_engine,
+      groupArrayIf(
+        map('schema', mv_sources.mv_database, 'name', mv_sources.mv_name, 'sql', mv_sources.mv_sql),
+        mv_sources.mv_name != ''
+      ) as mvs_pointing_to_it,0 as is_on_cluster
+        from system.tables as t
+      
+        join system.databases as db on t.database = db.name
+        left join mv_sources on mv_sources.target_fqn = concat(t.database, '.', t.name)
+      where schema = 'default'
+      group by name, schema, type, db_engine
+
+  ...
+[0m14:20:33.106578 [debug] [ThreadPool]: dbt_clickhouse adapter: SQL status: OK in 0.01 seconds
+[0m14:20:33.142430 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '35bb7866-6d57-4ecd-9133-ee1dbad0b7aa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c4229943380>]}
+[0m14:20:33.146129 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.no_rows_audit_reconciliation_.3206bbdfa1
+[0m14:20:33.147209 [info ] [Thread-1 (]: 1 of 1 START test no_rows_audit_reconciliation_ ................................ [RUN]
+[0m14:20:33.148470 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list__default, now test.telecom_cognitive_platform.no_rows_audit_reconciliation_.3206bbdfa1)
+[0m14:20:33.149444 [debug] [Thread-1 (]: Began compiling node test.telecom_cognitive_platform.no_rows_audit_reconciliation_.3206bbdfa1
+[0m14:20:33.167699 [debug] [Thread-1 (]: Writing injected SQL for node "test.telecom_cognitive_platform.no_rows_audit_reconciliation_.3206bbdfa1"
+[0m14:20:33.169173 [debug] [Thread-1 (]: Began executing node test.telecom_cognitive_platform.no_rows_audit_reconciliation_.3206bbdfa1
+[0m14:20:33.206837 [debug] [Thread-1 (]: Writing runtime sql for node "test.telecom_cognitive_platform.no_rows_audit_reconciliation_.3206bbdfa1"
+[0m14:20:33.209305 [debug] [Thread-1 (]: dbt_clickhouse adapter: On test.telecom_cognitive_platform.no_rows_audit_reconciliation_.3206bbdfa1: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "default", "target_name": "dev", "node_id": "test.telecom_cognitive_platform.no_rows_audit_reconciliation_.3206bbdfa1"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+-- Generic test that fails if the target relation returns any rows
+select 1 as failed
+from `default`.`audit_reconciliation`
+limit 1
+
+  
+  
+    ) dbt_internal_test...
+[0m14:20:33.275410 [debug] [Thread-1 (]: dbt_clickhouse adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "default", "target_name": "dev", "node_id": "test.telecom_cognitive_platform.no_rows_audit_reconciliation_.3206bbdfa1"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+-- Generic test that fails if the target relation returns any rows
+select 1 as failed
+from `default`.`audit_reconciliation`
+limit 1
+
+  
+  
+    ) dbt_internal_test
+[0m14:20:33.295230 [debug] [Thread-1 (]: Database Error in test no_rows_audit_reconciliation_ (models/silver/schema.yml)
+  Code: 60.
+  DB::Exception: Unknown table expression identifier 'default.audit_reconciliation' in scope SELECT 1 AS failed FROM default.audit_reconciliation LIMIT 1. Stack trace:
+  
+  0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x00000000171c8f2a
+  1. DB::Exception::Exception(String&&, int, String, bool) @ 0x000000001050bfce
+  2. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x000000001050b844
+  3. DB::Exception::Exception<String const&, String>(int, FormatStringHelperImpl<std::type_identity<String const&>::type, std::type_identity<String>::type>, String const&, String&&) @ 0x00000000116ac976
+  4. DB::QueryAnalyzer::resolveQuery(std::shared_ptr<DB::IQueryTreeNode> const&, DB::IdentifierResolveScope&) @ 0x000000001ae9ccba
+  5. DB::QueryAnalyzer::resolveExpressionNode(std::shared_ptr<DB::IQueryTreeNode>&, DB::IdentifierResolveScope&, bool, bool, bool, bool) @ 0x000000001aea403f
+  6. DB::QueryAnalyzer::resolveQueryJoinTreeNode(std::shared_ptr<DB::IQueryTreeNode>&, DB::IdentifierResolveScope&, DB::QueryExpressionsAliasVisitor&) @ 0x000000001aecf9e0
+  7. DB::QueryAnalyzer::resolveQuery(std::shared_ptr<DB::IQueryTreeNode> const&, DB::IdentifierResolveScope&) @ 0x000000001ae98eca
+  8. DB::QueryAnalyzer::resolve(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::IQueryTreeNode> const&, std::shared_ptr<DB::Context const>) @ 0x000000001ae96657
+  9. DB::QueryAnalysisPass::run(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::Context const>) @ 0x000000001ae95b3a
+  10. DB::QueryTreePassManager::run(std::shared_ptr<DB::IQueryTreeNode>&) @ 0x000000001aef7e01
+  11. DB::buildQueryTreeAndRunPasses(boost::intrusive_ptr<DB::IAST> const&, DB::SelectQueryOptions const&, std::shared_ptr<DB::Context const> const&, std::shared_ptr<DB::IStorage> const&) @ 0x000000001ba94d64
+  12. DB::InterpreterSelectQueryAnalyzer::InterpreterSelectQueryAnalyzer(boost::intrusive_ptr<DB::IAST> const&, std::shared_ptr<DB::Context const> const&, DB::SelectQueryOptions const&, std::vector<String, std::allocator<String>> const&, DB::ActionsDAG const*) @ 0x000000001ba9290c
+  13. std::unique_ptr<DB::IInterpreter, std::default_delete<DB::IInterpreter>> std::__function::__policy_func<std::unique_ptr<DB::IInterpreter, std::default_delete<DB::IInterpreter>> (DB::InterpreterFactory::Arguments const&)>::__call_func[abi:fqe220101]<DB::registerInterpreterSelectQueryAnalyzer(DB::InterpreterFactory&)::$_0>(std::__function::__policy_storage const*, DB::InterpreterFactory::Arguments const&) (.llvm.7377630212471404761) @ 0x000000001ba9ba65
+  14. DB::InterpreterFactory::get(boost::intrusive_ptr<DB::IAST>&, std::shared_ptr<DB::Context>, DB::SelectQueryOptions const&) @ 0x000000001ba379cd
+  15. DB::executeQueryImpl(char const*, char const*, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum, std::unique_ptr<DB::ReadBuffer, std::default_delete<DB::ReadBuffer>>&, boost::intrusive_ptr<DB::IAST>&, std::shared_ptr<DB::ImplicitTransactionControlExecutor>, std::function<void ()>, DB::QueryResultDetails&) @ 0x000000001bf0fe88
+  16. DB::executeQuery(String const&, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum) @ 0x000000001bf0a741
+  17. DB::TCPHandler::runImpl() @ 0x000000001d72addd
+  18. DB::TCPHandler::run() @ 0x000000001d74fc24
+  19. Poco::Net::TCPServerConnection::start() @ 0x0000000022f6db87
+  20. Poco::Net::TCPServerDispatcher::run() @ 0x0000000022f6e082
+  21. Poco::PooledThread::run() @ 0x0000000022f2fa1c
+  22. Poco::ThreadImpl::runnableEntry(void*) @ 0x0000000022f2df0f
+  23. ? @ 0x0000000000094ac3
+  24. clone @ 0x0000000000125a84
+  compiled code at target/run/telecom_cognitive_platform/models/silver/schema.yml/no_rows_audit_reconciliation_.sql
+[0m14:20:33.296717 [error] [Thread-1 (]: 1 of 1 ERROR no_rows_audit_reconciliation_ ..................................... [[31mERROR[0m in 0.15s]
+[0m14:20:33.298408 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.no_rows_audit_reconciliation_.3206bbdfa1
+[0m14:20:33.300050 [debug] [Thread-4 (]: Marking all children of 'test.telecom_cognitive_platform.no_rows_audit_reconciliation_.3206bbdfa1' to be skipped because of status 'error'.  Reason: Database Error in test no_rows_audit_reconciliation_ (models/silver/schema.yml)
+  Code: 60.
+  DB::Exception: Unknown table expression identifier 'default.audit_reconciliation' in scope SELECT 1 AS failed FROM default.audit_reconciliation LIMIT 1. Stack trace:
+  
+  0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x00000000171c8f2a
+  1. DB::Exception::Exception(String&&, int, String, bool) @ 0x000000001050bfce
+  2. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x000000001050b844
+  3. DB::Exception::Exception<String const&, String>(int, FormatStringHelperImpl<std::type_identity<String const&>::type, std::type_identity<String>::type>, String const&, String&&) @ 0x00000000116ac976
+  4. DB::QueryAnalyzer::resolveQuery(std::shared_ptr<DB::IQueryTreeNode> const&, DB::IdentifierResolveScope&) @ 0x000000001ae9ccba
+  5. DB::QueryAnalyzer::resolveExpressionNode(std::shared_ptr<DB::IQueryTreeNode>&, DB::IdentifierResolveScope&, bool, bool, bool, bool) @ 0x000000001aea403f
+  6. DB::QueryAnalyzer::resolveQueryJoinTreeNode(std::shared_ptr<DB::IQueryTreeNode>&, DB::IdentifierResolveScope&, DB::QueryExpressionsAliasVisitor&) @ 0x000000001aecf9e0
+  7. DB::QueryAnalyzer::resolveQuery(std::shared_ptr<DB::IQueryTreeNode> const&, DB::IdentifierResolveScope&) @ 0x000000001ae98eca
+  8. DB::QueryAnalyzer::resolve(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::IQueryTreeNode> const&, std::shared_ptr<DB::Context const>) @ 0x000000001ae96657
+  9. DB::QueryAnalysisPass::run(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::Context const>) @ 0x000000001ae95b3a
+  10. DB::QueryTreePassManager::run(std::shared_ptr<DB::IQueryTreeNode>&) @ 0x000000001aef7e01
+  11. DB::buildQueryTreeAndRunPasses(boost::intrusive_ptr<DB::IAST> const&, DB::SelectQueryOptions const&, std::shared_ptr<DB::Context const> const&, std::shared_ptr<DB::IStorage> const&) @ 0x000000001ba94d64
+  12. DB::InterpreterSelectQueryAnalyzer::InterpreterSelectQueryAnalyzer(boost::intrusive_ptr<DB::IAST> const&, std::shared_ptr<DB::Context const> const&, DB::SelectQueryOptions const&, std::vector<String, std::allocator<String>> const&, DB::ActionsDAG const*) @ 0x000000001ba9290c
+  13. std::unique_ptr<DB::IInterpreter, std::default_delete<DB::IInterpreter>> std::__function::__policy_func<std::unique_ptr<DB::IInterpreter, std::default_delete<DB::IInterpreter>> (DB::InterpreterFactory::Arguments const&)>::__call_func[abi:fqe220101]<DB::registerInterpreterSelectQueryAnalyzer(DB::InterpreterFactory&)::$_0>(std::__function::__policy_storage const*, DB::InterpreterFactory::Arguments const&) (.llvm.7377630212471404761) @ 0x000000001ba9ba65
+  14. DB::InterpreterFactory::get(boost::intrusive_ptr<DB::IAST>&, std::shared_ptr<DB::Context>, DB::SelectQueryOptions const&) @ 0x000000001ba379cd
+  15. DB::executeQueryImpl(char const*, char const*, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum, std::unique_ptr<DB::ReadBuffer, std::default_delete<DB::ReadBuffer>>&, boost::intrusive_ptr<DB::IAST>&, std::shared_ptr<DB::ImplicitTransactionControlExecutor>, std::function<void ()>, DB::QueryResultDetails&) @ 0x000000001bf0fe88
+  16. DB::executeQuery(String const&, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum) @ 0x000000001bf0a741
+  17. DB::TCPHandler::runImpl() @ 0x000000001d72addd
+  18. DB::TCPHandler::run() @ 0x000000001d74fc24
+  19. Poco::Net::TCPServerConnection::start() @ 0x0000000022f6db87
+  20. Poco::Net::TCPServerDispatcher::run() @ 0x0000000022f6e082
+  21. Poco::PooledThread::run() @ 0x0000000022f2fa1c
+  22. Poco::ThreadImpl::runnableEntry(void*) @ 0x0000000022f2df0f
+  23. ? @ 0x0000000000094ac3
+  24. clone @ 0x0000000000125a84
+  compiled code at target/run/telecom_cognitive_platform/models/silver/schema.yml/no_rows_audit_reconciliation_.sql.
+[0m14:20:33.303388 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:20:33.304293 [debug] [MainThread]: Connection 'test.telecom_cognitive_platform.no_rows_audit_reconciliation_.3206bbdfa1' was left open.
+[0m14:20:33.305046 [debug] [MainThread]: On test.telecom_cognitive_platform.no_rows_audit_reconciliation_.3206bbdfa1: Close
+[0m14:20:33.305745 [info ] [MainThread]: 
+[0m14:20:33.306558 [info ] [MainThread]: Finished running 1 test in 0 hours 0 minutes and 0.60 seconds (0.60s).
+[0m14:20:33.308224 [debug] [MainThread]: Command end result
+[0m14:20:33.363668 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/Telecom-Cognitive-Platform/target/manifest.json
+[0m14:20:33.366889 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/Telecom-Cognitive-Platform/target/semantic_manifest.json
+[0m14:20:33.378036 [debug] [MainThread]: Wrote artifact RunExecutionResult to /workspaces/Telecom-Cognitive-Platform/target/run_results.json
+[0m14:20:33.379022 [info ] [MainThread]: 
+[0m14:20:33.380228 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m14:20:33.381145 [info ] [MainThread]: 
+[0m14:20:33.382108 [error] [MainThread]: [31mFailure in test no_rows_audit_reconciliation_ (models/silver/schema.yml)[0m
+[0m14:20:33.383331 [error] [MainThread]:   Database Error in test no_rows_audit_reconciliation_ (models/silver/schema.yml)
+  Code: 60.
+  DB::Exception: Unknown table expression identifier 'default.audit_reconciliation' in scope SELECT 1 AS failed FROM default.audit_reconciliation LIMIT 1. Stack trace:
+  
+  0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x00000000171c8f2a
+  1. DB::Exception::Exception(String&&, int, String, bool) @ 0x000000001050bfce
+  2. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x000000001050b844
+  3. DB::Exception::Exception<String const&, String>(int, FormatStringHelperImpl<std::type_identity<String const&>::type, std::type_identity<String>::type>, String const&, String&&) @ 0x00000000116ac976
+  4. DB::QueryAnalyzer::resolveQuery(std::shared_ptr<DB::IQueryTreeNode> const&, DB::IdentifierResolveScope&) @ 0x000000001ae9ccba
+  5. DB::QueryAnalyzer::resolveExpressionNode(std::shared_ptr<DB::IQueryTreeNode>&, DB::IdentifierResolveScope&, bool, bool, bool, bool) @ 0x000000001aea403f
+  6. DB::QueryAnalyzer::resolveQueryJoinTreeNode(std::shared_ptr<DB::IQueryTreeNode>&, DB::IdentifierResolveScope&, DB::QueryExpressionsAliasVisitor&) @ 0x000000001aecf9e0
+  7. DB::QueryAnalyzer::resolveQuery(std::shared_ptr<DB::IQueryTreeNode> const&, DB::IdentifierResolveScope&) @ 0x000000001ae98eca
+  8. DB::QueryAnalyzer::resolve(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::IQueryTreeNode> const&, std::shared_ptr<DB::Context const>) @ 0x000000001ae96657
+  9. DB::QueryAnalysisPass::run(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::Context const>) @ 0x000000001ae95b3a
+  10. DB::QueryTreePassManager::run(std::shared_ptr<DB::IQueryTreeNode>&) @ 0x000000001aef7e01
+  11. DB::buildQueryTreeAndRunPasses(boost::intrusive_ptr<DB::IAST> const&, DB::SelectQueryOptions const&, std::shared_ptr<DB::Context const> const&, std::shared_ptr<DB::IStorage> const&) @ 0x000000001ba94d64
+  12. DB::InterpreterSelectQueryAnalyzer::InterpreterSelectQueryAnalyzer(boost::intrusive_ptr<DB::IAST> const&, std::shared_ptr<DB::Context const> const&, DB::SelectQueryOptions const&, std::vector<String, std::allocator<String>> const&, DB::ActionsDAG const*) @ 0x000000001ba9290c
+  13. std::unique_ptr<DB::IInterpreter, std::default_delete<DB::IInterpreter>> std::__function::__policy_func<std::unique_ptr<DB::IInterpreter, std::default_delete<DB::IInterpreter>> (DB::InterpreterFactory::Arguments const&)>::__call_func[abi:fqe220101]<DB::registerInterpreterSelectQueryAnalyzer(DB::InterpreterFactory&)::$_0>(std::__function::__policy_storage const*, DB::InterpreterFactory::Arguments const&) (.llvm.7377630212471404761) @ 0x000000001ba9ba65
+  14. DB::InterpreterFactory::get(boost::intrusive_ptr<DB::IAST>&, std::shared_ptr<DB::Context>, DB::SelectQueryOptions const&) @ 0x000000001ba379cd
+  15. DB::executeQueryImpl(char const*, char const*, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum, std::unique_ptr<DB::ReadBuffer, std::default_delete<DB::ReadBuffer>>&, boost::intrusive_ptr<DB::IAST>&, std::shared_ptr<DB::ImplicitTransactionControlExecutor>, std::function<void ()>, DB::QueryResultDetails&) @ 0x000000001bf0fe88
+  16. DB::executeQuery(String const&, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum) @ 0x000000001bf0a741
+  17. DB::TCPHandler::runImpl() @ 0x000000001d72addd
+  18. DB::TCPHandler::run() @ 0x000000001d74fc24
+  19. Poco::Net::TCPServerConnection::start() @ 0x0000000022f6db87
+  20. Poco::Net::TCPServerDispatcher::run() @ 0x0000000022f6e082
+  21. Poco::PooledThread::run() @ 0x0000000022f2fa1c
+  22. Poco::ThreadImpl::runnableEntry(void*) @ 0x0000000022f2df0f
+  23. ? @ 0x0000000000094ac3
+  24. clone @ 0x0000000000125a84
+  compiled code at target/run/telecom_cognitive_platform/models/silver/schema.yml/no_rows_audit_reconciliation_.sql
+[0m14:20:33.384627 [info ] [MainThread]: 
+[0m14:20:33.385714 [info ] [MainThread]:   compiled code at target/compiled/telecom_cognitive_platform/models/silver/schema.yml/no_rows_audit_reconciliation_.sql
+[0m14:20:33.386509 [info ] [MainThread]: 
+[0m14:20:33.387369 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=1
+[0m14:20:33.388617 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- ModelParamUsageDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m14:20:33.392447 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": false, "command_wall_clock_time": 2.2743807, "process_in_blocks": "4944", "process_kernel_time": 0.281469, "process_mem_max_rss": "148904", "process_out_blocks": "4016", "process_user_time": 3.492384}
+[0m14:20:33.393425 [debug] [MainThread]: Command `dbt test` failed at 14:20:33.393261 after 2.28 seconds
+[0m14:20:33.395306 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c422ae43ef0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c422ae43710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c422a0643b0>]}
+[0m14:20:33.396279 [debug] [MainThread]: Flushing usage events
+[0m14:20:33.810654 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:20:56.438753 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b38e743e060>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b38e8e5ffb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b38e6b7ec90>]}
+
+
+============================== 14:20:56.447784 | fdf54dc9-b1e5-49e9-a5a0-396d7ea39019 ==============================
+[0m14:20:56.447784 [info ] [MainThread]: Running with dbt=1.11.11
+[0m14:20:56.449353 [debug] [MainThread]: running dbt with arguments {'use_experimental_parser': 'False', 'fail_fast': 'False', 'indirect_selection': 'eager', 'invocation_command': 'dbt build --profiles-dir ./ci --select audit_reconciliation', 'send_anonymous_usage_stats': 'True', 'printer_width': '80', 'warn_error': 'None', 'no_print': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'empty': 'False', 'version_check': 'True', 'profiles_dir': './ci', 'quiet': 'False', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'write_json': 'True', 'log_cache_events': 'False', 'static_parser': 'True', 'log_path': '/workspaces/Telecom-Cognitive-Platform/logs', 'debug': 'False'}
+[0m14:20:56.675382 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'fdf54dc9-b1e5-49e9-a5a0-396d7ea39019', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b38e61f6930>]}
+[0m14:20:56.753169 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'fdf54dc9-b1e5-49e9-a5a0-396d7ea39019', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b38e6419970>]}
+[0m14:20:56.754182 [info ] [MainThread]: Registered adapter: clickhouse=1.10.0
+[0m14:20:56.882560 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m14:20:57.053739 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m14:20:57.054740 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m14:20:57.055666 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m14:20:57.178522 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'fdf54dc9-b1e5-49e9-a5a0-396d7ea39019', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b38e60d19d0>]}
+[0m14:20:57.287395 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/Telecom-Cognitive-Platform/target/manifest.json
+[0m14:20:57.289730 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/Telecom-Cognitive-Platform/target/semantic_manifest.json
+[0m14:20:57.317005 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'fdf54dc9-b1e5-49e9-a5a0-396d7ea39019', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b38e5be51c0>]}
+[0m14:20:57.317700 [info ] [MainThread]: Found 4 models, 16 data tests, 2 seeds, 525 macros
+[0m14:20:57.320202 [info ] [MainThread]: 
+[0m14:20:57.320907 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:20:57.321507 [info ] [MainThread]: 
+[0m14:20:57.322222 [debug] [MainThread]: Acquiring new clickhouse connection 'master'
+[0m14:20:57.323294 [debug] [ThreadPool]: Acquiring new clickhouse connection 'list_'
+[0m14:20:57.338174 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:20:57.522714 [debug] [ThreadPool]: dbt_clickhouse adapter: On list_: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "default", "target_name": "dev", "connection_name": "list_"} */
+
+    select name from system.databases
+  ...
+[0m14:20:57.525376 [debug] [ThreadPool]: dbt_clickhouse adapter: SQL status: OK in 0.00 seconds
+[0m14:20:57.559653 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_, now list__default)
+[0m14:20:57.567760 [debug] [ThreadPool]: dbt_clickhouse adapter: On list__default: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "default", "target_name": "dev", "connection_name": "list__default"} */
+with mv_sources as (
+      -- Find all MVs and their target tables (database and name of the MV, plus the SELECT SQL)
+      select
+        name as mv_name,
+        database as mv_database,
+        any(as_select) as mv_sql,
+        any(replaceRegexpOne(create_table_query, '.*TO\\s+`?([^`\\s(]+)`?\\.`?([^`\\s(]+)`?.*', '\\1.\\2')) as target_fqn
+      
+      from system.tables
+      
+      where engine = 'MaterializedView'
+        and create_table_query like '%TO %'
+      group by mv_name, mv_database
+    )
+    select
+      t.name as name,
+      t.database as schema,
+      multiIf(
+        t.engine = 'MaterializedView', 'materialized_view',
+        t.engine = 'View', 'view',
+        t.engine = 'Dictionary', 'dictionary',
+        'table'
+      ) as type,
+      db.engine as db_engine,
+      groupArrayIf(
+        map('schema', mv_sources.mv_database, 'name', mv_sources.mv_name, 'sql', mv_sources.mv_sql),
+        mv_sources.mv_name != ''
+      ) as mvs_pointing_to_it,0 as is_on_cluster
+        from system.tables as t
+      
+        join system.databases as db on t.database = db.name
+        left join mv_sources on mv_sources.target_fqn = concat(t.database, '.', t.name)
+      where schema = 'default'
+      group by name, schema, type, db_engine
+
+  ...
+[0m14:20:57.582931 [debug] [ThreadPool]: dbt_clickhouse adapter: SQL status: OK in 0.01 seconds
+[0m14:20:57.585715 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'fdf54dc9-b1e5-49e9-a5a0-396d7ea39019', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b38e60d1490>]}
+[0m14:20:57.590795 [debug] [Thread-1 (]: Began running node model.telecom_cognitive_platform.audit_reconciliation
+[0m14:20:57.591933 [info ] [Thread-1 (]: 1 of 2 START sql view model `default`.`audit_reconciliation` ................... [RUN]
+[0m14:20:57.593072 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list__default, now model.telecom_cognitive_platform.audit_reconciliation)
+[0m14:20:57.593932 [debug] [Thread-1 (]: Began compiling node model.telecom_cognitive_platform.audit_reconciliation
+[0m14:20:57.603499 [debug] [Thread-1 (]: Writing injected SQL for node "model.telecom_cognitive_platform.audit_reconciliation"
+[0m14:20:57.604339 [debug] [Thread-1 (]: Began executing node model.telecom_cognitive_platform.audit_reconciliation
+[0m14:20:57.619377 [debug] [Thread-1 (]: Creating new relation audit_reconciliation
+[0m14:20:57.634387 [debug] [Thread-1 (]: Writing runtime sql for node "model.telecom_cognitive_platform.audit_reconciliation"
+[0m14:20:57.635475 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.telecom_cognitive_platform.audit_reconciliation: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "default", "target_name": "dev", "node_id": "model.telecom_cognitive_platform.audit_reconciliation"} */
+
+
+  create or replace view `default`.`audit_reconciliation` 
+  
+    
+  
+  
+    
+    
+  as (
+    -- audit reconciliation model
+-- compares row counts and aggregated bytes between staging and silver for active partition
+
+with stg as (
+    select
+        count(*) as stg_count,
+        sum(coalesce(bytes_dl,0) + coalesce(bytes_ul,0)) as stg_total_bytes
+    from `default`.`stg_fact_network_usage`
+    where timestamp >= now() - interval 3 day
+),
+silver as (
+    select
+        count(*) as silver_count,
+        sum(coalesce(total_bytes,0)) as silver_total_bytes
+    from `default`.`silver_fact_network_usage`
+    where timestamp >= now() - interval 3 day
+)
+
+select
+    'counts' as metric,
+    stg.stg_count as left_value,
+    silver.silver_count as right_value,
+    (stg.stg_count - silver.silver_count) as diff
+from stg cross join silver
+where stg.stg_count != silver.silver_count
+
+union all
+
+select
+    'bytes' as metric,
+    stg.stg_total_bytes as left_value,
+    silver.silver_total_bytes as right_value,
+    (coalesce(stg.stg_total_bytes,0) - coalesce(silver.silver_total_bytes,0)) as diff
+from stg cross join silver
+where coalesce(stg.stg_total_bytes,0) != coalesce(silver.silver_total_bytes,0)
+    
+  )
+      
+      
+                    -- end_of_sql
+                    
+                    ...
+[0m14:20:57.640164 [debug] [Thread-1 (]: dbt_clickhouse adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "default", "target_name": "dev", "node_id": "model.telecom_cognitive_platform.audit_reconciliation"} */
+
+
+  create or replace view `default`.`audit_reconciliation` 
+  
+    
+  
+  
+    
+    
+  as (
+    -- audit reconciliation model
+-- compares row counts and aggregated bytes between staging and silver for active partition
+
+with stg as (
+    select
+        count(*) as stg_count,
+        sum(coalesce(bytes_dl,0) + coalesce(bytes_ul,0)) as stg_total_bytes
+    from `default`.`stg_fact_network_usage`
+    where timestamp >= now() - interval 3 day
+),
+silver as (
+    select
+        count(*) as silver_count,
+        sum(coalesce(total_bytes,0)) as silver_total_bytes
+    from `default`.`silver_fact_network_usage`
+    where timestamp >= now() - interval 3 day
+)
+
+select
+    'counts' as metric,
+    stg.stg_count as left_value,
+    silver.silver_count as right_value,
+    (stg.stg_count - silver.silver_count) as diff
+from stg cross join silver
+where stg.stg_count != silver.silver_count
+
+union all
+
+select
+    'bytes' as metric,
+    stg.stg_total_bytes as left_value,
+    silver.silver_total_bytes as right_value,
+    (coalesce(stg.stg_total_bytes,0) - coalesce(silver.silver_total_bytes,0)) as diff
+from stg cross join silver
+where coalesce(stg.stg_total_bytes,0) != coalesce(silver.silver_total_bytes,0)
+    
+  )
+      
+      
+                    -- end_of_sql
+                    
+                    
+[0m14:20:57.645575 [debug] [Thread-1 (]: Database Error in model audit_reconciliation (models/silver/audit_reconciliation.sql)
+  Code: 60.
+  DB::Exception: Unknown table expression identifier 'default.stg_fact_network_usage' in scope SELECT count(*) AS stg_count, sum(coalesce(bytes_dl, 0) + coalesce(bytes_ul, 0)) AS stg_total_bytes FROM default.stg_fact_network_usage WHERE timestamp >= (now() - toIntervalDay(3)). Stack trace:
+  
+  0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x00000000171c8f2a
+  1. DB::Exception::Exception(String&&, int, String, bool) @ 0x000000001050bfce
+  2. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x000000001050b844
+  3. DB::Exception::Exception<String const&, String>(int, FormatStringHelperImpl<std::type_identity<String const&>::type, std::type_identity<String>::type>, String const&, String&&) @ 0x00000000116ac976
+  4. DB::QueryAnalyzer::resolveQuery(std::shared_ptr<DB::IQueryTreeNode> const&, DB::IdentifierResolveScope&) @ 0x000000001ae9ccba
+  5. DB::QueryAnalyzer::resolveExpressionNode(std::shared_ptr<DB::IQueryTreeNode>&, DB::IdentifierResolveScope&, bool, bool, bool, bool) @ 0x000000001aea403f
+  6. DB::QueryAnalyzer::resolveQueryJoinTreeNode(std::shared_ptr<DB::IQueryTreeNode>&, DB::IdentifierResolveScope&, DB::QueryExpressionsAliasVisitor&) @ 0x000000001aecf9e0
+  7. DB::QueryAnalyzer::resolveQueryJoinTreeNode(std::shared_ptr<DB::IQueryTreeNode>&, DB::IdentifierResolveScope&, DB::QueryExpressionsAliasVisitor&) @ 0x000000001aecf301
+  8. DB::QueryAnalyzer::resolveQuery(std::shared_ptr<DB::IQueryTreeNode> const&, DB::IdentifierResolveScope&) @ 0x000000001ae98eca
+  9. DB::QueryAnalyzer::resolveUnion(std::shared_ptr<DB::IQueryTreeNode> const&, DB::IdentifierResolveScope&) @ 0x000000001ae9e159
+  10. DB::QueryAnalyzer::resolve(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::IQueryTreeNode> const&, std::shared_ptr<DB::Context const>) @ 0x000000001ae96636
+  11. DB::QueryAnalysisPass::run(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::Context const>) @ 0x000000001ae95b3a
+  12. DB::QueryTreePassManager::run(std::shared_ptr<DB::IQueryTreeNode>&) @ 0x000000001aef7e01
+  13. DB::buildQueryTreeAndRunPasses(boost::intrusive_ptr<DB::IAST> const&, DB::SelectQueryOptions const&, std::shared_ptr<DB::Context const> const&, std::shared_ptr<DB::IStorage> const&) @ 0x000000001ba94d64
+  14. DB::InterpreterSelectQueryAnalyzer::InterpreterSelectQueryAnalyzer(boost::intrusive_ptr<DB::IAST> const&, std::shared_ptr<DB::Context const> const&, DB::SelectQueryOptions const&, std::vector<String, std::allocator<String>> const&, DB::ActionsDAG const*) @ 0x000000001ba9290c
+  15. DB::InterpreterSelectQueryAnalyzer::getSampleBlock(boost::intrusive_ptr<DB::IAST> const&, std::shared_ptr<DB::Context const> const&, DB::SelectQueryOptions const&) @ 0x000000001ba958ed
+  16. DB::InterpreterCreateQuery::getTablePropertiesAndNormalizeCreateQuery(DB::ASTCreateQuery&, DB::LoadingStrictnessLevel) @ 0x000000001b9dc934
+  17. DB::InterpreterCreateQuery::createTable(DB::ASTCreateQuery&) @ 0x000000001b9e43cc
+  18. DB::InterpreterCreateQuery::execute() @ 0x000000001b9faa1e
+  19. DB::executeQueryImpl(char const*, char const*, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum, std::unique_ptr<DB::ReadBuffer, std::default_delete<DB::ReadBuffer>>&, boost::intrusive_ptr<DB::IAST>&, std::shared_ptr<DB::ImplicitTransactionControlExecutor>, std::function<void ()>, DB::QueryResultDetails&) @ 0x000000001bf1060b
+  20. DB::executeQuery(String const&, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum) @ 0x000000001bf0a741
+  21. DB::TCPHandler::runImpl() @ 0x000000001d72addd
+  22. DB::TCPHandler::run() @ 0x000000001d74fc24
+  23. Poco::Net::TCPServerConnection::start() @ 0x0000000022f6db87
+  24. Poco::Net::TCPServerDispatcher::run() @ 0x0000000022f6e082
+  25. Poco::PooledThread::run() @ 0x0000000022f2fa1c
+  26. Poco::ThreadImpl::runnableEntry(void*) @ 0x0000000022f2df0f
+  27. ? @ 0x0000000000094ac3
+  28. clone @ 0x0000000000125a84
+  compiled code at target/run/telecom_cognitive_platform/models/silver/audit_reconciliation.sql
+[0m14:20:57.647363 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fdf54dc9-b1e5-49e9-a5a0-396d7ea39019', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b38e7270b30>]}
+[0m14:20:57.648200 [error] [Thread-1 (]: 1 of 2 ERROR creating sql view model `default`.`audit_reconciliation` .......... [[31mERROR[0m in 0.05s]
+[0m14:20:57.649145 [debug] [Thread-1 (]: Finished running node model.telecom_cognitive_platform.audit_reconciliation
+[0m14:20:57.649982 [debug] [Thread-4 (]: Marking all children of 'model.telecom_cognitive_platform.audit_reconciliation' to be skipped because of status 'error'.  Reason: Database Error in model audit_reconciliation (models/silver/audit_reconciliation.sql)
+  Code: 60.
+  DB::Exception: Unknown table expression identifier 'default.stg_fact_network_usage' in scope SELECT count(*) AS stg_count, sum(coalesce(bytes_dl, 0) + coalesce(bytes_ul, 0)) AS stg_total_bytes FROM default.stg_fact_network_usage WHERE timestamp >= (now() - toIntervalDay(3)). Stack trace:
+  
+  0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x00000000171c8f2a
+  1. DB::Exception::Exception(String&&, int, String, bool) @ 0x000000001050bfce
+  2. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x000000001050b844
+  3. DB::Exception::Exception<String const&, String>(int, FormatStringHelperImpl<std::type_identity<String const&>::type, std::type_identity<String>::type>, String const&, String&&) @ 0x00000000116ac976
+  4. DB::QueryAnalyzer::resolveQuery(std::shared_ptr<DB::IQueryTreeNode> const&, DB::IdentifierResolveScope&) @ 0x000000001ae9ccba
+  5. DB::QueryAnalyzer::resolveExpressionNode(std::shared_ptr<DB::IQueryTreeNode>&, DB::IdentifierResolveScope&, bool, bool, bool, bool) @ 0x000000001aea403f
+  6. DB::QueryAnalyzer::resolveQueryJoinTreeNode(std::shared_ptr<DB::IQueryTreeNode>&, DB::IdentifierResolveScope&, DB::QueryExpressionsAliasVisitor&) @ 0x000000001aecf9e0
+  7. DB::QueryAnalyzer::resolveQueryJoinTreeNode(std::shared_ptr<DB::IQueryTreeNode>&, DB::IdentifierResolveScope&, DB::QueryExpressionsAliasVisitor&) @ 0x000000001aecf301
+  8. DB::QueryAnalyzer::resolveQuery(std::shared_ptr<DB::IQueryTreeNode> const&, DB::IdentifierResolveScope&) @ 0x000000001ae98eca
+  9. DB::QueryAnalyzer::resolveUnion(std::shared_ptr<DB::IQueryTreeNode> const&, DB::IdentifierResolveScope&) @ 0x000000001ae9e159
+  10. DB::QueryAnalyzer::resolve(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::IQueryTreeNode> const&, std::shared_ptr<DB::Context const>) @ 0x000000001ae96636
+  11. DB::QueryAnalysisPass::run(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::Context const>) @ 0x000000001ae95b3a
+  12. DB::QueryTreePassManager::run(std::shared_ptr<DB::IQueryTreeNode>&) @ 0x000000001aef7e01
+  13. DB::buildQueryTreeAndRunPasses(boost::intrusive_ptr<DB::IAST> const&, DB::SelectQueryOptions const&, std::shared_ptr<DB::Context const> const&, std::shared_ptr<DB::IStorage> const&) @ 0x000000001ba94d64
+  14. DB::InterpreterSelectQueryAnalyzer::InterpreterSelectQueryAnalyzer(boost::intrusive_ptr<DB::IAST> const&, std::shared_ptr<DB::Context const> const&, DB::SelectQueryOptions const&, std::vector<String, std::allocator<String>> const&, DB::ActionsDAG const*) @ 0x000000001ba9290c
+  15. DB::InterpreterSelectQueryAnalyzer::getSampleBlock(boost::intrusive_ptr<DB::IAST> const&, std::shared_ptr<DB::Context const> const&, DB::SelectQueryOptions const&) @ 0x000000001ba958ed
+  16. DB::InterpreterCreateQuery::getTablePropertiesAndNormalizeCreateQuery(DB::ASTCreateQuery&, DB::LoadingStrictnessLevel) @ 0x000000001b9dc934
+  17. DB::InterpreterCreateQuery::createTable(DB::ASTCreateQuery&) @ 0x000000001b9e43cc
+  18. DB::InterpreterCreateQuery::execute() @ 0x000000001b9faa1e
+  19. DB::executeQueryImpl(char const*, char const*, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum, std::unique_ptr<DB::ReadBuffer, std::default_delete<DB::ReadBuffer>>&, boost::intrusive_ptr<DB::IAST>&, std::shared_ptr<DB::ImplicitTransactionControlExecutor>, std::function<void ()>, DB::QueryResultDetails&) @ 0x000000001bf1060b
+  20. DB::executeQuery(String const&, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum) @ 0x000000001bf0a741
+  21. DB::TCPHandler::runImpl() @ 0x000000001d72addd
+  22. DB::TCPHandler::run() @ 0x000000001d74fc24
+  23. Poco::Net::TCPServerConnection::start() @ 0x0000000022f6db87
+  24. Poco::Net::TCPServerDispatcher::run() @ 0x0000000022f6e082
+  25. Poco::PooledThread::run() @ 0x0000000022f2fa1c
+  26. Poco::ThreadImpl::runnableEntry(void*) @ 0x0000000022f2df0f
+  27. ? @ 0x0000000000094ac3
+  28. clone @ 0x0000000000125a84
+  compiled code at target/run/telecom_cognitive_platform/models/silver/audit_reconciliation.sql.
+[0m14:20:57.651373 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.no_rows_audit_reconciliation_.3206bbdfa1
+[0m14:20:57.651925 [info ] [Thread-1 (]: 2 of 2 SKIP test no_rows_audit_reconciliation_ ................................. [[33mSKIP[0m]
+[0m14:20:57.652539 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.no_rows_audit_reconciliation_.3206bbdfa1
+[0m14:20:57.653035 [debug] [Thread-4 (]: Marking all children of 'test.telecom_cognitive_platform.no_rows_audit_reconciliation_.3206bbdfa1' to be skipped because of status 'skipped'. 
+[0m14:20:57.654413 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:20:57.655062 [debug] [MainThread]: Connection 'model.telecom_cognitive_platform.audit_reconciliation' was left open.
+[0m14:20:57.655522 [debug] [MainThread]: On model.telecom_cognitive_platform.audit_reconciliation: Close
+[0m14:20:57.656028 [info ] [MainThread]: 
+[0m14:20:57.657152 [info ] [MainThread]: Finished running 1 test, 1 view model in 0 hours 0 minutes and 0.33 seconds (0.33s).
+[0m14:20:57.658958 [debug] [MainThread]: Command end result
+[0m14:20:57.755610 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/Telecom-Cognitive-Platform/target/manifest.json
+[0m14:20:57.758245 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/Telecom-Cognitive-Platform/target/semantic_manifest.json
+[0m14:20:57.766931 [debug] [MainThread]: Wrote artifact RunExecutionResult to /workspaces/Telecom-Cognitive-Platform/target/run_results.json
+[0m14:20:57.767581 [info ] [MainThread]: 
+[0m14:20:57.768236 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m14:20:57.768785 [info ] [MainThread]: 
+[0m14:20:57.769397 [error] [MainThread]: [31mFailure in model audit_reconciliation (models/silver/audit_reconciliation.sql)[0m
+[0m14:20:57.770090 [error] [MainThread]:   Database Error in model audit_reconciliation (models/silver/audit_reconciliation.sql)
+  Code: 60.
+  DB::Exception: Unknown table expression identifier 'default.stg_fact_network_usage' in scope SELECT count(*) AS stg_count, sum(coalesce(bytes_dl, 0) + coalesce(bytes_ul, 0)) AS stg_total_bytes FROM default.stg_fact_network_usage WHERE timestamp >= (now() - toIntervalDay(3)). Stack trace:
+  
+  0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x00000000171c8f2a
+  1. DB::Exception::Exception(String&&, int, String, bool) @ 0x000000001050bfce
+  2. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x000000001050b844
+  3. DB::Exception::Exception<String const&, String>(int, FormatStringHelperImpl<std::type_identity<String const&>::type, std::type_identity<String>::type>, String const&, String&&) @ 0x00000000116ac976
+  4. DB::QueryAnalyzer::resolveQuery(std::shared_ptr<DB::IQueryTreeNode> const&, DB::IdentifierResolveScope&) @ 0x000000001ae9ccba
+  5. DB::QueryAnalyzer::resolveExpressionNode(std::shared_ptr<DB::IQueryTreeNode>&, DB::IdentifierResolveScope&, bool, bool, bool, bool) @ 0x000000001aea403f
+  6. DB::QueryAnalyzer::resolveQueryJoinTreeNode(std::shared_ptr<DB::IQueryTreeNode>&, DB::IdentifierResolveScope&, DB::QueryExpressionsAliasVisitor&) @ 0x000000001aecf9e0
+  7. DB::QueryAnalyzer::resolveQueryJoinTreeNode(std::shared_ptr<DB::IQueryTreeNode>&, DB::IdentifierResolveScope&, DB::QueryExpressionsAliasVisitor&) @ 0x000000001aecf301
+  8. DB::QueryAnalyzer::resolveQuery(std::shared_ptr<DB::IQueryTreeNode> const&, DB::IdentifierResolveScope&) @ 0x000000001ae98eca
+  9. DB::QueryAnalyzer::resolveUnion(std::shared_ptr<DB::IQueryTreeNode> const&, DB::IdentifierResolveScope&) @ 0x000000001ae9e159
+  10. DB::QueryAnalyzer::resolve(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::IQueryTreeNode> const&, std::shared_ptr<DB::Context const>) @ 0x000000001ae96636
+  11. DB::QueryAnalysisPass::run(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::Context const>) @ 0x000000001ae95b3a
+  12. DB::QueryTreePassManager::run(std::shared_ptr<DB::IQueryTreeNode>&) @ 0x000000001aef7e01
+  13. DB::buildQueryTreeAndRunPasses(boost::intrusive_ptr<DB::IAST> const&, DB::SelectQueryOptions const&, std::shared_ptr<DB::Context const> const&, std::shared_ptr<DB::IStorage> const&) @ 0x000000001ba94d64
+  14. DB::InterpreterSelectQueryAnalyzer::InterpreterSelectQueryAnalyzer(boost::intrusive_ptr<DB::IAST> const&, std::shared_ptr<DB::Context const> const&, DB::SelectQueryOptions const&, std::vector<String, std::allocator<String>> const&, DB::ActionsDAG const*) @ 0x000000001ba9290c
+  15. DB::InterpreterSelectQueryAnalyzer::getSampleBlock(boost::intrusive_ptr<DB::IAST> const&, std::shared_ptr<DB::Context const> const&, DB::SelectQueryOptions const&) @ 0x000000001ba958ed
+  16. DB::InterpreterCreateQuery::getTablePropertiesAndNormalizeCreateQuery(DB::ASTCreateQuery&, DB::LoadingStrictnessLevel) @ 0x000000001b9dc934
+  17. DB::InterpreterCreateQuery::createTable(DB::ASTCreateQuery&) @ 0x000000001b9e43cc
+  18. DB::InterpreterCreateQuery::execute() @ 0x000000001b9faa1e
+  19. DB::executeQueryImpl(char const*, char const*, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum, std::unique_ptr<DB::ReadBuffer, std::default_delete<DB::ReadBuffer>>&, boost::intrusive_ptr<DB::IAST>&, std::shared_ptr<DB::ImplicitTransactionControlExecutor>, std::function<void ()>, DB::QueryResultDetails&) @ 0x000000001bf1060b
+  20. DB::executeQuery(String const&, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum) @ 0x000000001bf0a741
+  21. DB::TCPHandler::runImpl() @ 0x000000001d72addd
+  22. DB::TCPHandler::run() @ 0x000000001d74fc24
+  23. Poco::Net::TCPServerConnection::start() @ 0x0000000022f6db87
+  24. Poco::Net::TCPServerDispatcher::run() @ 0x0000000022f6e082
+  25. Poco::PooledThread::run() @ 0x0000000022f2fa1c
+  26. Poco::ThreadImpl::runnableEntry(void*) @ 0x0000000022f2df0f
+  27. ? @ 0x0000000000094ac3
+  28. clone @ 0x0000000000125a84
+  compiled code at target/run/telecom_cognitive_platform/models/silver/audit_reconciliation.sql
+[0m14:20:57.770729 [info ] [MainThread]: 
+[0m14:20:57.771335 [info ] [MainThread]:   compiled code at target/compiled/telecom_cognitive_platform/models/silver/audit_reconciliation.sql
+[0m14:20:57.771831 [info ] [MainThread]: 
+[0m14:20:57.772347 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=1 NO-OP=0 TOTAL=2
+[0m14:20:57.773459 [debug] [MainThread]: Resource report: {"command_name": "build", "command_success": false, "command_wall_clock_time": 1.405009, "process_in_blocks": "192", "process_kernel_time": 0.238358, "process_mem_max_rss": "147440", "process_out_blocks": "2768", "process_user_time": 2.648755}
+[0m14:20:57.774215 [debug] [MainThread]: Command `dbt build` failed at 14:20:57.774059 after 1.41 seconds
+[0m14:20:57.774956 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b38e67e6c60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b38e778d3a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b38e778d3d0>]}
+[0m14:20:57.775588 [debug] [MainThread]: Flushing usage events
+[0m14:20:58.139306 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:21:14.633747 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cd1f9a6a0c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cd1fb8dca70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cd1f9a318b0>]}
+
+
+============================== 14:21:14.639385 | 91073cd1-7e57-4004-bac6-b8288f0eedab ==============================
+[0m14:21:14.639385 [info ] [MainThread]: Running with dbt=1.11.11
+[0m14:21:14.640573 [debug] [MainThread]: running dbt with arguments {'fail_fast': 'False', 'debug': 'False', 'warn_error': 'None', 'target_path': 'None', 'empty': 'False', 'version_check': 'True', 'partial_parse': 'True', 'quiet': 'False', 'log_format': 'default', 'log_path': '/workspaces/Telecom-Cognitive-Platform/logs', 'use_experimental_parser': 'False', 'invocation_command': 'dbt build --profiles-dir ./ci --select +audit_reconciliation', 'introspect': 'True', 'no_print': 'None', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'send_anonymous_usage_stats': 'True', 'profiles_dir': './ci', 'use_colors': 'True', 'log_cache_events': 'False', 'write_json': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80'}
+[0m14:21:14.896285 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '91073cd1-7e57-4004-bac6-b8288f0eedab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cd1f8795f40>]}
+[0m14:21:14.963653 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '91073cd1-7e57-4004-bac6-b8288f0eedab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cd1f8795c70>]}
+[0m14:21:14.964637 [info ] [MainThread]: Registered adapter: clickhouse=1.10.0
+[0m14:21:15.105376 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m14:21:15.239723 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m14:21:15.240279 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m14:21:15.240694 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m14:21:15.299760 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '91073cd1-7e57-4004-bac6-b8288f0eedab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cd1f87368a0>]}
+[0m14:21:15.409619 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/Telecom-Cognitive-Platform/target/manifest.json
+[0m14:21:15.411764 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/Telecom-Cognitive-Platform/target/semantic_manifest.json
+[0m14:21:15.432433 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '91073cd1-7e57-4004-bac6-b8288f0eedab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cd1f835f8f0>]}
+[0m14:21:15.433160 [info ] [MainThread]: Found 4 models, 16 data tests, 2 seeds, 525 macros
+[0m14:21:15.436104 [info ] [MainThread]: 
+[0m14:21:15.436665 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:21:15.437165 [info ] [MainThread]: 
+[0m14:21:15.437846 [debug] [MainThread]: Acquiring new clickhouse connection 'master'
+[0m14:21:15.446000 [debug] [ThreadPool]: Acquiring new clickhouse connection 'list_'
+[0m14:21:15.457499 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:21:15.703023 [debug] [ThreadPool]: dbt_clickhouse adapter: On list_: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "default", "target_name": "dev", "connection_name": "list_"} */
+
+    select name from system.databases
+  ...
+[0m14:21:15.705595 [debug] [ThreadPool]: dbt_clickhouse adapter: SQL status: OK in 0.00 seconds
+[0m14:21:15.727456 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_, now list__default)
+[0m14:21:15.734524 [debug] [ThreadPool]: dbt_clickhouse adapter: On list__default: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "default", "target_name": "dev", "connection_name": "list__default"} */
+with mv_sources as (
+      -- Find all MVs and their target tables (database and name of the MV, plus the SELECT SQL)
+      select
+        name as mv_name,
+        database as mv_database,
+        any(as_select) as mv_sql,
+        any(replaceRegexpOne(create_table_query, '.*TO\\s+`?([^`\\s(]+)`?\\.`?([^`\\s(]+)`?.*', '\\1.\\2')) as target_fqn
+      
+      from system.tables
+      
+      where engine = 'MaterializedView'
+        and create_table_query like '%TO %'
+      group by mv_name, mv_database
+    )
+    select
+      t.name as name,
+      t.database as schema,
+      multiIf(
+        t.engine = 'MaterializedView', 'materialized_view',
+        t.engine = 'View', 'view',
+        t.engine = 'Dictionary', 'dictionary',
+        'table'
+      ) as type,
+      db.engine as db_engine,
+      groupArrayIf(
+        map('schema', mv_sources.mv_database, 'name', mv_sources.mv_name, 'sql', mv_sources.mv_sql),
+        mv_sources.mv_name != ''
+      ) as mvs_pointing_to_it,0 as is_on_cluster
+        from system.tables as t
+      
+        join system.databases as db on t.database = db.name
+        left join mv_sources on mv_sources.target_fqn = concat(t.database, '.', t.name)
+      where schema = 'default'
+      group by name, schema, type, db_engine
+
+  ...
+[0m14:21:15.745558 [debug] [ThreadPool]: dbt_clickhouse adapter: SQL status: OK in 0.01 seconds
+[0m14:21:15.747362 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '91073cd1-7e57-4004-bac6-b8288f0eedab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cd1f8700770>]}
+[0m14:21:15.749768 [debug] [Thread-1 (]: Began running node model.telecom_cognitive_platform.stg_fact_network_usage
+[0m14:21:15.750569 [info ] [Thread-1 (]: 1 of 16 START sql view model `default`.`stg_fact_network_usage` ................ [RUN]
+[0m14:21:15.751288 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list__default, now model.telecom_cognitive_platform.stg_fact_network_usage)
+[0m14:21:15.751766 [debug] [Thread-1 (]: Began compiling node model.telecom_cognitive_platform.stg_fact_network_usage
+[0m14:21:15.759784 [debug] [Thread-1 (]: Writing injected SQL for node "model.telecom_cognitive_platform.stg_fact_network_usage"
+[0m14:21:15.760669 [debug] [Thread-1 (]: Began executing node model.telecom_cognitive_platform.stg_fact_network_usage
+[0m14:21:15.774752 [debug] [Thread-1 (]: Creating new relation stg_fact_network_usage
+[0m14:21:15.790403 [debug] [Thread-1 (]: Writing runtime sql for node "model.telecom_cognitive_platform.stg_fact_network_usage"
+[0m14:21:15.791420 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.telecom_cognitive_platform.stg_fact_network_usage: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "default", "target_name": "dev", "node_id": "model.telecom_cognitive_platform.stg_fact_network_usage"} */
+
+
+  create or replace view `default`.`stg_fact_network_usage` 
+  
+    
+  
+  
+    
+    
+  as (
+    -- staging model: stg_fact_network_usage.sql
+-- reads directly from Bronze ingest output and applies staging contracts
+
+with raw_events as (
+    select
+        md5(concat(customer_key, 'SECRET_SALT')) as customer_key_hash,
+        timestamp as event_timestamp,
+        bytes_dl,
+        bytes_ul,
+        network_type,
+        source_system,
+        ingest_timestamp
+    from file('data/bronze/network_usage.parquet', 'Parquet')
+    where timestamp >= now() - interval 3 day
+)
+
+select
+    md5(concat(customer_key_hash, '-', toString(toUnixTimestamp(event_timestamp)), '-', network_type)) as usage_pk,
+    customer_key_hash,
+    event_timestamp as timestamp,
+    bytes_dl,
+    bytes_ul,
+    network_type,
+    source_system,
+    ingest_timestamp
+from raw_events
+    
+  )
+      
+      
+                    -- end_of_sql
+                    
+                    ...
+[0m14:21:15.807541 [debug] [Thread-1 (]: dbt_clickhouse adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "default", "target_name": "dev", "node_id": "model.telecom_cognitive_platform.stg_fact_network_usage"} */
+
+
+  create or replace view `default`.`stg_fact_network_usage` 
+  
+    
+  
+  
+    
+    
+  as (
+    -- staging model: stg_fact_network_usage.sql
+-- reads directly from Bronze ingest output and applies staging contracts
+
+with raw_events as (
+    select
+        md5(concat(customer_key, 'SECRET_SALT')) as customer_key_hash,
+        timestamp as event_timestamp,
+        bytes_dl,
+        bytes_ul,
+        network_type,
+        source_system,
+        ingest_timestamp
+    from file('data/bronze/network_usage.parquet', 'Parquet')
+    where timestamp >= now() - interval 3 day
+)
+
+select
+    md5(concat(customer_key_hash, '-', toString(toUnixTimestamp(event_timestamp)), '-', network_type)) as usage_pk,
+    customer_key_hash,
+    event_timestamp as timestamp,
+    bytes_dl,
+    bytes_ul,
+    network_type,
+    source_system,
+    ingest_timestamp
+from raw_events
+    
+  )
+      
+      
+                    -- end_of_sql
+                    
+                    
+[0m14:21:15.813700 [debug] [Thread-1 (]: Database Error in model stg_fact_network_usage (models/staging/stg_fact_network_usage.sql)
+  Code: 400.
+  DB::ErrnoException. DB::ErrnoException: Cannot stat file /var/lib/clickhouse/user_files/data/bronze/network_usage.parquet: , errno: 2, strerror: No such file or directory: The table structure cannot be extracted from a Parquet format file. You can specify the structure manually: (in file/uri /var/lib/clickhouse/user_files/data/bronze/network_usage.parquet). Stack trace:
+  
+  0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x00000000171c8f2a
+  1. DB::Exception::Exception(String&&, int, String, bool) @ 0x000000001050bfce
+  2. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x000000001050b844
+  3. DB::ErrnoException::ErrnoException<String const&>(int, FormatStringHelperImpl<std::type_identity<String const&>::type>, String const&) @ 0x000000001c6d9947
+  4. DB::(anonymous namespace)::ReadBufferFromFileIterator::next() @ 0x000000001c6dd382
+  5. DB::readSchemaFromFormatImpl(std::optional<String>, std::optional<DB::FormatSettings> const&, DB::IReadBufferIterator&, std::shared_ptr<DB::Context const> const&) @ 0x000000001d842aa4
+  6. DB::readSchemaFromFormat(String const&, std::optional<DB::FormatSettings> const&, DB::IReadBufferIterator&, std::shared_ptr<DB::Context const> const&) @ 0x000000001d84832d
+  7. DB::StorageFile::getTableStructureAndFormatFromFileImpl(std::optional<String>, std::vector<String, std::allocator<String>> const&, String const&, std::optional<DB::FormatSettings> const&, std::shared_ptr<DB::Context const> const&, std::optional<DB::StorageFile::ArchiveInfo> const&) @ 0x000000001c6c60b0
+  8. DB::StorageFile::getTableStructureFromFile(String const&, std::vector<String, std::allocator<String>> const&, String const&, std::optional<DB::FormatSettings> const&, std::shared_ptr<DB::Context const> const&, std::optional<DB::StorageFile::ArchiveInfo> const&) @ 0x000000001c6c69c9
+  9. DB::StorageFile::setStorageMetadata(DB::StorageFile::CommonArguments) @ 0x000000001c6c8271
+  10. DB::StorageFile::StorageFile(DB::StorageFile::FileSource, DB::StorageFile::CommonArguments) @ 0x000000001c6c996b
+  11. DB::TableFunctionFile::getStorage(String const&, String const&, DB::ColumnsDescription const&, std::shared_ptr<DB::Context const>, String const&, String const&, bool) const @ 0x0000000019118489
+  12. DB::ITableFunctionFileLike::executeImpl(boost::intrusive_ptr<DB::IAST> const&, std::shared_ptr<DB::Context const>, String const&, DB::ColumnsDescription, bool) const @ 0x000000001911bdb3
+  13. DB::ITableFunction::execute(boost::intrusive_ptr<DB::IAST> const&, std::shared_ptr<DB::Context const>, String const&, DB::ColumnsDescription, bool, bool) const @ 0x0000000019d694bd
+  14. DB::Context::executeTableFunction(boost::intrusive_ptr<DB::IAST> const&, std::shared_ptr<DB::ITableFunction> const&, std::shared_ptr<DB::Context const> const&) @ 0x000000001b7046fe
+  15. DB::QueryAnalyzer::resolveTableFunction(std::shared_ptr<DB::IQueryTreeNode>&, DB::IdentifierResolveScope&, DB::QueryExpressionsAliasVisitor&, bool) @ 0x000000001aea856b
+  16. DB::QueryAnalyzer::resolveQueryJoinTreeNode(std::shared_ptr<DB::IQueryTreeNode>&, DB::IdentifierResolveScope&, DB::QueryExpressionsAliasVisitor&) @ 0x000000001aecf08e
+  17. DB::QueryAnalyzer::resolveQuery(std::shared_ptr<DB::IQueryTreeNode> const&, DB::IdentifierResolveScope&) @ 0x000000001ae98eca
+  18. DB::QueryAnalyzer::resolveExpressionNode(std::shared_ptr<DB::IQueryTreeNode>&, DB::IdentifierResolveScope&, bool, bool, bool, bool) @ 0x000000001aea403f
+  19. DB::QueryAnalyzer::resolveQueryJoinTreeNode(std::shared_ptr<DB::IQueryTreeNode>&, DB::IdentifierResolveScope&, DB::QueryExpressionsAliasVisitor&) @ 0x000000001aecf9e0
+  20. DB::QueryAnalyzer::resolveQuery(std::shared_ptr<DB::IQueryTreeNode> const&, DB::IdentifierResolveScope&) @ 0x000000001ae98eca
+  21. DB::QueryAnalyzer::resolve(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::IQueryTreeNode> const&, std::shared_ptr<DB::Context const>) @ 0x000000001ae96657
+  22. DB::QueryAnalysisPass::run(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::Context const>) @ 0x000000001ae95b3a
+  23. DB::QueryTreePassManager::run(std::shared_ptr<DB::IQueryTreeNode>&) @ 0x000000001aef7e01
+  24. DB::buildQueryTreeAndRunPasses(boost::intrusive_ptr<DB::IAST> const&, DB::SelectQueryOptions const&, std::shared_ptr<DB::Context const> const&, std::shared_ptr<DB::IStorage> const&) @ 0x000000001ba94d64
+  25. DB::InterpreterSelectQueryAnalyzer::InterpreterSelectQueryAnalyzer(boost::intrusive_ptr<DB::IAST> const&, std::shared_ptr<DB::Context const> const&, DB::SelectQueryOptions const&, std::vector<String, std::allocator<String>> const&, DB::ActionsDAG const*) @ 0x000000001ba9290c
+  26. DB::InterpreterSelectQueryAnalyzer::getSampleBlock(boost::intrusive_ptr<DB::IAST> const&, std::shared_ptr<DB::Context const> const&, DB::SelectQueryOptions const&) @ 0x000000001ba958ed
+  27. DB::InterpreterCreateQuery::getTablePropertiesAndNormalizeCreateQuery(DB::ASTCreateQuery&, DB::LoadingStrictnessLevel) @ 0x000000001b9dc934
+  28. DB::InterpreterCreateQuery::createTable(DB::ASTCreateQuery&) @ 0x000000001b9e43cc
+  29. DB::InterpreterCreateQuery::execute() @ 0x000000001b9faa1e
+  30. DB::executeQueryImpl(char const*, char const*, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum, std::unique_ptr<DB::ReadBuffer, std::default_delete<DB::ReadBuffer>>&, boost::intrusive_ptr<DB::IAST>&, std::shared_ptr<DB::ImplicitTransactionControlExecutor>, std::function<void ()>, DB::QueryResultDetails&) @ 0x000000001bf1060b
+  31. DB::executeQuery(String const&, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum) @ 0x000000001bf0a741
+  compiled code at target/run/telecom_cognitive_platform/models/staging/stg_fact_network_usage.sql
+[0m14:21:15.816537 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '91073cd1-7e57-4004-bac6-b8288f0eedab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cd1f98a0710>]}
+[0m14:21:15.817721 [error] [Thread-1 (]: 1 of 16 ERROR creating sql view model `default`.`stg_fact_network_usage` ....... [[31mERROR[0m in 0.06s]
+[0m14:21:15.819001 [debug] [Thread-1 (]: Finished running node model.telecom_cognitive_platform.stg_fact_network_usage
+[0m14:21:15.820690 [debug] [Thread-4 (]: Marking all children of 'model.telecom_cognitive_platform.stg_fact_network_usage' to be skipped because of status 'error'.  Reason: Database Error in model stg_fact_network_usage (models/staging/stg_fact_network_usage.sql)
+  Code: 400.
+  DB::ErrnoException. DB::ErrnoException: Cannot stat file /var/lib/clickhouse/user_files/data/bronze/network_usage.parquet: , errno: 2, strerror: No such file or directory: The table structure cannot be extracted from a Parquet format file. You can specify the structure manually: (in file/uri /var/lib/clickhouse/user_files/data/bronze/network_usage.parquet). Stack trace:
+  
+  0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x00000000171c8f2a
+  1. DB::Exception::Exception(String&&, int, String, bool) @ 0x000000001050bfce
+  2. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x000000001050b844
+  3. DB::ErrnoException::ErrnoException<String const&>(int, FormatStringHelperImpl<std::type_identity<String const&>::type>, String const&) @ 0x000000001c6d9947
+  4. DB::(anonymous namespace)::ReadBufferFromFileIterator::next() @ 0x000000001c6dd382
+  5. DB::readSchemaFromFormatImpl(std::optional<String>, std::optional<DB::FormatSettings> const&, DB::IReadBufferIterator&, std::shared_ptr<DB::Context const> const&) @ 0x000000001d842aa4
+  6. DB::readSchemaFromFormat(String const&, std::optional<DB::FormatSettings> const&, DB::IReadBufferIterator&, std::shared_ptr<DB::Context const> const&) @ 0x000000001d84832d
+  7. DB::StorageFile::getTableStructureAndFormatFromFileImpl(std::optional<String>, std::vector<String, std::allocator<String>> const&, String const&, std::optional<DB::FormatSettings> const&, std::shared_ptr<DB::Context const> const&, std::optional<DB::StorageFile::ArchiveInfo> const&) @ 0x000000001c6c60b0
+  8. DB::StorageFile::getTableStructureFromFile(String const&, std::vector<String, std::allocator<String>> const&, String const&, std::optional<DB::FormatSettings> const&, std::shared_ptr<DB::Context const> const&, std::optional<DB::StorageFile::ArchiveInfo> const&) @ 0x000000001c6c69c9
+  9. DB::StorageFile::setStorageMetadata(DB::StorageFile::CommonArguments) @ 0x000000001c6c8271
+  10. DB::StorageFile::StorageFile(DB::StorageFile::FileSource, DB::StorageFile::CommonArguments) @ 0x000000001c6c996b
+  11. DB::TableFunctionFile::getStorage(String const&, String const&, DB::ColumnsDescription const&, std::shared_ptr<DB::Context const>, String const&, String const&, bool) const @ 0x0000000019118489
+  12. DB::ITableFunctionFileLike::executeImpl(boost::intrusive_ptr<DB::IAST> const&, std::shared_ptr<DB::Context const>, String const&, DB::ColumnsDescription, bool) const @ 0x000000001911bdb3
+  13. DB::ITableFunction::execute(boost::intrusive_ptr<DB::IAST> const&, std::shared_ptr<DB::Context const>, String const&, DB::ColumnsDescription, bool, bool) const @ 0x0000000019d694bd
+  14. DB::Context::executeTableFunction(boost::intrusive_ptr<DB::IAST> const&, std::shared_ptr<DB::ITableFunction> const&, std::shared_ptr<DB::Context const> const&) @ 0x000000001b7046fe
+  15. DB::QueryAnalyzer::resolveTableFunction(std::shared_ptr<DB::IQueryTreeNode>&, DB::IdentifierResolveScope&, DB::QueryExpressionsAliasVisitor&, bool) @ 0x000000001aea856b
+  16. DB::QueryAnalyzer::resolveQueryJoinTreeNode(std::shared_ptr<DB::IQueryTreeNode>&, DB::IdentifierResolveScope&, DB::QueryExpressionsAliasVisitor&) @ 0x000000001aecf08e
+  17. DB::QueryAnalyzer::resolveQuery(std::shared_ptr<DB::IQueryTreeNode> const&, DB::IdentifierResolveScope&) @ 0x000000001ae98eca
+  18. DB::QueryAnalyzer::resolveExpressionNode(std::shared_ptr<DB::IQueryTreeNode>&, DB::IdentifierResolveScope&, bool, bool, bool, bool) @ 0x000000001aea403f
+  19. DB::QueryAnalyzer::resolveQueryJoinTreeNode(std::shared_ptr<DB::IQueryTreeNode>&, DB::IdentifierResolveScope&, DB::QueryExpressionsAliasVisitor&) @ 0x000000001aecf9e0
+  20. DB::QueryAnalyzer::resolveQuery(std::shared_ptr<DB::IQueryTreeNode> const&, DB::IdentifierResolveScope&) @ 0x000000001ae98eca
+  21. DB::QueryAnalyzer::resolve(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::IQueryTreeNode> const&, std::shared_ptr<DB::Context const>) @ 0x000000001ae96657
+  22. DB::QueryAnalysisPass::run(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::Context const>) @ 0x000000001ae95b3a
+  23. DB::QueryTreePassManager::run(std::shared_ptr<DB::IQueryTreeNode>&) @ 0x000000001aef7e01
+  24. DB::buildQueryTreeAndRunPasses(boost::intrusive_ptr<DB::IAST> const&, DB::SelectQueryOptions const&, std::shared_ptr<DB::Context const> const&, std::shared_ptr<DB::IStorage> const&) @ 0x000000001ba94d64
+  25. DB::InterpreterSelectQueryAnalyzer::InterpreterSelectQueryAnalyzer(boost::intrusive_ptr<DB::IAST> const&, std::shared_ptr<DB::Context const> const&, DB::SelectQueryOptions const&, std::vector<String, std::allocator<String>> const&, DB::ActionsDAG const*) @ 0x000000001ba9290c
+  26. DB::InterpreterSelectQueryAnalyzer::getSampleBlock(boost::intrusive_ptr<DB::IAST> const&, std::shared_ptr<DB::Context const> const&, DB::SelectQueryOptions const&) @ 0x000000001ba958ed
+  27. DB::InterpreterCreateQuery::getTablePropertiesAndNormalizeCreateQuery(DB::ASTCreateQuery&, DB::LoadingStrictnessLevel) @ 0x000000001b9dc934
+  28. DB::InterpreterCreateQuery::createTable(DB::ASTCreateQuery&) @ 0x000000001b9e43cc
+  29. DB::InterpreterCreateQuery::execute() @ 0x000000001b9faa1e
+  30. DB::executeQueryImpl(char const*, char const*, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum, std::unique_ptr<DB::ReadBuffer, std::default_delete<DB::ReadBuffer>>&, boost::intrusive_ptr<DB::IAST>&, std::shared_ptr<DB::ImplicitTransactionControlExecutor>, std::function<void ()>, DB::QueryResultDetails&) @ 0x000000001bf1060b
+  31. DB::executeQuery(String const&, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum) @ 0x000000001bf0a741
+  compiled code at target/run/telecom_cognitive_platform/models/staging/stg_fact_network_usage.sql.
+[0m14:21:15.824224 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.bytes_non_negative_stg_fact_network_usage_.851f94137c
+[0m14:21:15.824814 [info ] [Thread-1 (]: 2 of 16 SKIP test bytes_non_negative_stg_fact_network_usage_ ................... [[33mSKIP[0m]
+[0m14:21:15.826511 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.bytes_non_negative_stg_fact_network_usage_.851f94137c
+[0m14:21:15.827360 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_bytes_dl.27ab51994f
+[0m14:21:15.828072 [debug] [Thread-4 (]: Marking all children of 'test.telecom_cognitive_platform.bytes_non_negative_stg_fact_network_usage_.851f94137c' to be skipped because of status 'skipped'. 
+[0m14:21:15.828897 [info ] [Thread-1 (]: 3 of 16 SKIP test not_null_stg_fact_network_usage_bytes_dl ..................... [[33mSKIP[0m]
+[0m14:21:15.830049 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_bytes_dl.27ab51994f
+[0m14:21:15.830907 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_bytes_ul.43978cf3c2
+[0m14:21:15.832378 [info ] [Thread-1 (]: 4 of 16 SKIP test not_null_stg_fact_network_usage_bytes_ul ..................... [[33mSKIP[0m]
+[0m14:21:15.831559 [debug] [Thread-4 (]: Marking all children of 'test.telecom_cognitive_platform.not_null_stg_fact_network_usage_bytes_dl.27ab51994f' to be skipped because of status 'skipped'. 
+[0m14:21:15.833011 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_bytes_ul.43978cf3c2
+[0m14:21:15.833893 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_customer_key_hash.4e37b9929a
+[0m14:21:15.835710 [info ] [Thread-1 (]: 5 of 16 SKIP test not_null_stg_fact_network_usage_customer_key_hash ............ [[33mSKIP[0m]
+[0m14:21:15.834776 [debug] [Thread-4 (]: Marking all children of 'test.telecom_cognitive_platform.not_null_stg_fact_network_usage_bytes_ul.43978cf3c2' to be skipped because of status 'skipped'. 
+[0m14:21:15.836705 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_customer_key_hash.4e37b9929a
+[0m14:21:15.838108 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_usage_pk.24207a32b9
+[0m14:21:15.839948 [info ] [Thread-1 (]: 6 of 16 SKIP test not_null_stg_fact_network_usage_usage_pk ..................... [[33mSKIP[0m]
+[0m14:21:15.839021 [debug] [Thread-4 (]: Marking all children of 'test.telecom_cognitive_platform.not_null_stg_fact_network_usage_customer_key_hash.4e37b9929a' to be skipped because of status 'skipped'. 
+[0m14:21:15.841035 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.not_null_stg_fact_network_usage_usage_pk.24207a32b9
+[0m14:21:15.842194 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.unique_stg_fact_network_usage_usage_pk.cb284a42a0
+[0m14:21:15.843792 [info ] [Thread-1 (]: 7 of 16 SKIP test unique_stg_fact_network_usage_usage_pk ....................... [[33mSKIP[0m]
+[0m14:21:15.842906 [debug] [Thread-4 (]: Marking all children of 'test.telecom_cognitive_platform.not_null_stg_fact_network_usage_usage_pk.24207a32b9' to be skipped because of status 'skipped'. 
+[0m14:21:15.844917 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.unique_stg_fact_network_usage_usage_pk.cb284a42a0
+[0m14:21:15.845691 [debug] [Thread-4 (]: Marking all children of 'test.telecom_cognitive_platform.unique_stg_fact_network_usage_usage_pk.cb284a42a0' to be skipped because of status 'skipped'. 
+[0m14:21:15.846627 [debug] [Thread-1 (]: Began running node model.telecom_cognitive_platform.silver_fact_network_usage
+[0m14:21:15.847478 [info ] [Thread-1 (]: 8 of 16 SKIP relation default.silver_fact_network_usage ........................ [[33mSKIP[0m]
+[0m14:21:15.848191 [debug] [Thread-1 (]: Finished running node model.telecom_cognitive_platform.silver_fact_network_usage
+[0m14:21:15.849213 [debug] [Thread-4 (]: Marking all children of 'model.telecom_cognitive_platform.silver_fact_network_usage' to be skipped because of status 'skipped'. 
+[0m14:21:15.850627 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.bytes_non_negative_silver_fact_network_usage_.afbe04dc6c
+[0m14:21:15.852668 [info ] [Thread-1 (]: 9 of 16 SKIP test bytes_non_negative_silver_fact_network_usage_ ................ [[33mSKIP[0m]
+[0m14:21:15.853405 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.bytes_non_negative_silver_fact_network_usage_.afbe04dc6c
+[0m14:21:15.854070 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.not_null_silver_fact_network_usage_customer_key_hash.da9f185d9b
+[0m14:21:15.856203 [debug] [Thread-4 (]: Marking all children of 'test.telecom_cognitive_platform.bytes_non_negative_silver_fact_network_usage_.afbe04dc6c' to be skipped because of status 'skipped'. 
+[0m14:21:15.857028 [info ] [Thread-1 (]: 10 of 16 SKIP test not_null_silver_fact_network_usage_customer_key_hash ........ [[33mSKIP[0m]
+[0m14:21:15.858351 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.not_null_silver_fact_network_usage_customer_key_hash.da9f185d9b
+[0m14:21:15.859214 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.not_null_silver_fact_network_usage_total_bytes.104c6efcdd
+[0m14:21:15.861105 [info ] [Thread-1 (]: 11 of 16 SKIP test not_null_silver_fact_network_usage_total_bytes .............. [[33mSKIP[0m]
+[0m14:21:15.860033 [debug] [Thread-4 (]: Marking all children of 'test.telecom_cognitive_platform.not_null_silver_fact_network_usage_customer_key_hash.da9f185d9b' to be skipped because of status 'skipped'. 
+[0m14:21:15.862158 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.not_null_silver_fact_network_usage_total_bytes.104c6efcdd
+[0m14:21:15.863155 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.not_null_silver_fact_network_usage_usage_pk.75441be17e
+[0m14:21:15.863559 [debug] [Thread-4 (]: Marking all children of 'test.telecom_cognitive_platform.not_null_silver_fact_network_usage_total_bytes.104c6efcdd' to be skipped because of status 'skipped'. 
+[0m14:21:15.864126 [info ] [Thread-1 (]: 12 of 16 SKIP test not_null_silver_fact_network_usage_usage_pk ................. [[33mSKIP[0m]
+[0m14:21:15.864941 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.not_null_silver_fact_network_usage_usage_pk.75441be17e
+[0m14:21:15.865468 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.relationships_silver_fact_network_usage_customer_key_hash__customer_key_hash__ref_dim_customer_.852117840d
+[0m14:21:15.865836 [debug] [Thread-4 (]: Marking all children of 'test.telecom_cognitive_platform.not_null_silver_fact_network_usage_usage_pk.75441be17e' to be skipped because of status 'skipped'. 
+[0m14:21:15.866441 [info ] [Thread-1 (]: 13 of 16 SKIP test relationships_silver_fact_network_usage_customer_key_hash__customer_key_hash__ref_dim_customer_  [[33mSKIP[0m]
+[0m14:21:15.867320 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.relationships_silver_fact_network_usage_customer_key_hash__customer_key_hash__ref_dim_customer_.852117840d
+[0m14:21:15.867854 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.unique_silver_fact_network_usage_usage_pk.80bf80164f
+[0m14:21:15.869222 [info ] [Thread-1 (]: 14 of 16 SKIP test unique_silver_fact_network_usage_usage_pk ................... [[33mSKIP[0m]
+[0m14:21:15.868447 [debug] [Thread-4 (]: Marking all children of 'test.telecom_cognitive_platform.relationships_silver_fact_network_usage_customer_key_hash__customer_key_hash__ref_dim_customer_.852117840d' to be skipped because of status 'skipped'. 
+[0m14:21:15.870181 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.unique_silver_fact_network_usage_usage_pk.80bf80164f
+[0m14:21:15.871484 [debug] [Thread-4 (]: Marking all children of 'test.telecom_cognitive_platform.unique_silver_fact_network_usage_usage_pk.80bf80164f' to be skipped because of status 'skipped'. 
+[0m14:21:15.872602 [debug] [Thread-1 (]: Began running node model.telecom_cognitive_platform.audit_reconciliation
+[0m14:21:15.873557 [info ] [Thread-1 (]: 15 of 16 SKIP relation default.audit_reconciliation ............................ [[33mSKIP[0m]
+[0m14:21:15.874583 [debug] [Thread-1 (]: Finished running node model.telecom_cognitive_platform.audit_reconciliation
+[0m14:21:15.875191 [debug] [Thread-4 (]: Marking all children of 'model.telecom_cognitive_platform.audit_reconciliation' to be skipped because of status 'skipped'. 
+[0m14:21:15.876310 [debug] [Thread-1 (]: Began running node test.telecom_cognitive_platform.no_rows_audit_reconciliation_.3206bbdfa1
+[0m14:21:15.877188 [info ] [Thread-1 (]: 16 of 16 SKIP test no_rows_audit_reconciliation_ ............................... [[33mSKIP[0m]
+[0m14:21:15.878277 [debug] [Thread-1 (]: Finished running node test.telecom_cognitive_platform.no_rows_audit_reconciliation_.3206bbdfa1
+[0m14:21:15.879157 [debug] [Thread-4 (]: Marking all children of 'test.telecom_cognitive_platform.no_rows_audit_reconciliation_.3206bbdfa1' to be skipped because of status 'skipped'. 
+[0m14:21:15.882343 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:21:15.883258 [debug] [MainThread]: Connection 'model.telecom_cognitive_platform.stg_fact_network_usage' was left open.
+[0m14:21:15.884393 [debug] [MainThread]: On model.telecom_cognitive_platform.stg_fact_network_usage: Close
+[0m14:21:15.886289 [info ] [MainThread]: 
+[0m14:21:15.886815 [info ] [MainThread]: Finished running 13 data tests, 3 view models in 0 hours 0 minutes and 0.45 seconds (0.45s).
+[0m14:21:15.888405 [debug] [MainThread]: Command end result
+[0m14:21:15.988964 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/Telecom-Cognitive-Platform/target/manifest.json
+[0m14:21:15.991305 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/Telecom-Cognitive-Platform/target/semantic_manifest.json
+[0m14:21:15.997940 [debug] [MainThread]: Wrote artifact RunExecutionResult to /workspaces/Telecom-Cognitive-Platform/target/run_results.json
+[0m14:21:15.998426 [info ] [MainThread]: 
+[0m14:21:15.999010 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m14:21:15.999564 [info ] [MainThread]: 
+[0m14:21:16.000201 [error] [MainThread]: [31mFailure in model stg_fact_network_usage (models/staging/stg_fact_network_usage.sql)[0m
+[0m14:21:16.001276 [error] [MainThread]:   Database Error in model stg_fact_network_usage (models/staging/stg_fact_network_usage.sql)
+  Code: 400.
+  DB::ErrnoException. DB::ErrnoException: Cannot stat file /var/lib/clickhouse/user_files/data/bronze/network_usage.parquet: , errno: 2, strerror: No such file or directory: The table structure cannot be extracted from a Parquet format file. You can specify the structure manually: (in file/uri /var/lib/clickhouse/user_files/data/bronze/network_usage.parquet). Stack trace:
+  
+  0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x00000000171c8f2a
+  1. DB::Exception::Exception(String&&, int, String, bool) @ 0x000000001050bfce
+  2. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x000000001050b844
+  3. DB::ErrnoException::ErrnoException<String const&>(int, FormatStringHelperImpl<std::type_identity<String const&>::type>, String const&) @ 0x000000001c6d9947
+  4. DB::(anonymous namespace)::ReadBufferFromFileIterator::next() @ 0x000000001c6dd382
+  5. DB::readSchemaFromFormatImpl(std::optional<String>, std::optional<DB::FormatSettings> const&, DB::IReadBufferIterator&, std::shared_ptr<DB::Context const> const&) @ 0x000000001d842aa4
+  6. DB::readSchemaFromFormat(String const&, std::optional<DB::FormatSettings> const&, DB::IReadBufferIterator&, std::shared_ptr<DB::Context const> const&) @ 0x000000001d84832d
+  7. DB::StorageFile::getTableStructureAndFormatFromFileImpl(std::optional<String>, std::vector<String, std::allocator<String>> const&, String const&, std::optional<DB::FormatSettings> const&, std::shared_ptr<DB::Context const> const&, std::optional<DB::StorageFile::ArchiveInfo> const&) @ 0x000000001c6c60b0
+  8. DB::StorageFile::getTableStructureFromFile(String const&, std::vector<String, std::allocator<String>> const&, String const&, std::optional<DB::FormatSettings> const&, std::shared_ptr<DB::Context const> const&, std::optional<DB::StorageFile::ArchiveInfo> const&) @ 0x000000001c6c69c9
+  9. DB::StorageFile::setStorageMetadata(DB::StorageFile::CommonArguments) @ 0x000000001c6c8271
+  10. DB::StorageFile::StorageFile(DB::StorageFile::FileSource, DB::StorageFile::CommonArguments) @ 0x000000001c6c996b
+  11. DB::TableFunctionFile::getStorage(String const&, String const&, DB::ColumnsDescription const&, std::shared_ptr<DB::Context const>, String const&, String const&, bool) const @ 0x0000000019118489
+  12. DB::ITableFunctionFileLike::executeImpl(boost::intrusive_ptr<DB::IAST> const&, std::shared_ptr<DB::Context const>, String const&, DB::ColumnsDescription, bool) const @ 0x000000001911bdb3
+  13. DB::ITableFunction::execute(boost::intrusive_ptr<DB::IAST> const&, std::shared_ptr<DB::Context const>, String const&, DB::ColumnsDescription, bool, bool) const @ 0x0000000019d694bd
+  14. DB::Context::executeTableFunction(boost::intrusive_ptr<DB::IAST> const&, std::shared_ptr<DB::ITableFunction> const&, std::shared_ptr<DB::Context const> const&) @ 0x000000001b7046fe
+  15. DB::QueryAnalyzer::resolveTableFunction(std::shared_ptr<DB::IQueryTreeNode>&, DB::IdentifierResolveScope&, DB::QueryExpressionsAliasVisitor&, bool) @ 0x000000001aea856b
+  16. DB::QueryAnalyzer::resolveQueryJoinTreeNode(std::shared_ptr<DB::IQueryTreeNode>&, DB::IdentifierResolveScope&, DB::QueryExpressionsAliasVisitor&) @ 0x000000001aecf08e
+  17. DB::QueryAnalyzer::resolveQuery(std::shared_ptr<DB::IQueryTreeNode> const&, DB::IdentifierResolveScope&) @ 0x000000001ae98eca
+  18. DB::QueryAnalyzer::resolveExpressionNode(std::shared_ptr<DB::IQueryTreeNode>&, DB::IdentifierResolveScope&, bool, bool, bool, bool) @ 0x000000001aea403f
+  19. DB::QueryAnalyzer::resolveQueryJoinTreeNode(std::shared_ptr<DB::IQueryTreeNode>&, DB::IdentifierResolveScope&, DB::QueryExpressionsAliasVisitor&) @ 0x000000001aecf9e0
+  20. DB::QueryAnalyzer::resolveQuery(std::shared_ptr<DB::IQueryTreeNode> const&, DB::IdentifierResolveScope&) @ 0x000000001ae98eca
+  21. DB::QueryAnalyzer::resolve(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::IQueryTreeNode> const&, std::shared_ptr<DB::Context const>) @ 0x000000001ae96657
+  22. DB::QueryAnalysisPass::run(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::Context const>) @ 0x000000001ae95b3a
+  23. DB::QueryTreePassManager::run(std::shared_ptr<DB::IQueryTreeNode>&) @ 0x000000001aef7e01
+  24. DB::buildQueryTreeAndRunPasses(boost::intrusive_ptr<DB::IAST> const&, DB::SelectQueryOptions const&, std::shared_ptr<DB::Context const> const&, std::shared_ptr<DB::IStorage> const&) @ 0x000000001ba94d64
+  25. DB::InterpreterSelectQueryAnalyzer::InterpreterSelectQueryAnalyzer(boost::intrusive_ptr<DB::IAST> const&, std::shared_ptr<DB::Context const> const&, DB::SelectQueryOptions const&, std::vector<String, std::allocator<String>> const&, DB::ActionsDAG const*) @ 0x000000001ba9290c
+  26. DB::InterpreterSelectQueryAnalyzer::getSampleBlock(boost::intrusive_ptr<DB::IAST> const&, std::shared_ptr<DB::Context const> const&, DB::SelectQueryOptions const&) @ 0x000000001ba958ed
+  27. DB::InterpreterCreateQuery::getTablePropertiesAndNormalizeCreateQuery(DB::ASTCreateQuery&, DB::LoadingStrictnessLevel) @ 0x000000001b9dc934
+  28. DB::InterpreterCreateQuery::createTable(DB::ASTCreateQuery&) @ 0x000000001b9e43cc
+  29. DB::InterpreterCreateQuery::execute() @ 0x000000001b9faa1e
+  30. DB::executeQueryImpl(char const*, char const*, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum, std::unique_ptr<DB::ReadBuffer, std::default_delete<DB::ReadBuffer>>&, boost::intrusive_ptr<DB::IAST>&, std::shared_ptr<DB::ImplicitTransactionControlExecutor>, std::function<void ()>, DB::QueryResultDetails&) @ 0x000000001bf1060b
+  31. DB::executeQuery(String const&, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum) @ 0x000000001bf0a741
+  compiled code at target/run/telecom_cognitive_platform/models/staging/stg_fact_network_usage.sql
+[0m14:21:16.002365 [info ] [MainThread]: 
+[0m14:21:16.003124 [info ] [MainThread]:   compiled code at target/compiled/telecom_cognitive_platform/models/staging/stg_fact_network_usage.sql
+[0m14:21:16.003802 [info ] [MainThread]: 
+[0m14:21:16.004514 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=15 NO-OP=0 TOTAL=16
+[0m14:21:16.006074 [debug] [MainThread]: Resource report: {"command_name": "build", "command_success": false, "command_wall_clock_time": 1.4381744, "process_in_blocks": "0", "process_kernel_time": 0.207432, "process_mem_max_rss": "147644", "process_out_blocks": "2816", "process_user_time": 2.59241}
+[0m14:21:16.006986 [debug] [MainThread]: Command `dbt build` failed at 14:21:16.006807 after 1.44 seconds
+[0m14:21:16.007734 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cd1f90ce9c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cd1f95a9880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cd1f83f1e50>]}
+[0m14:21:16.008467 [debug] [MainThread]: Flushing usage events
+[0m14:21:16.392625 [debug] [MainThread]: An error was encountered while trying to flush usage events

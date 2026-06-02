@@ -10,7 +10,7 @@ with raw_events as (
         network_type,
         source_system,
         ingest_timestamp
-    from file('data/bronze/network_usage.parquet', 'Parquet')
+    from file('user_files/bronze/network_usage.parquet', 'Parquet')
     where timestamp >= now() - interval 3 day
 )
 
