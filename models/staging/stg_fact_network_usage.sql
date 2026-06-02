@@ -3,7 +3,7 @@
 
 with raw_events as (
     select
-        md5(concat(customer_key, 'SECRET_SALT')) as customer_key_hash,
+        MD5(concat(customer_key, 'SECRET_SALT')) as customer_key_hash,
         timestamp as event_timestamp,
         bytes_dl,
         bytes_ul,
